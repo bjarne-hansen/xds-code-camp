@@ -1,0 +1,133 @@
+
+
+Structure
+---------
+soap:Envelope
+
+	soap:Header
+	
+		wsse:Security
+		
+			wsu:Timestamp
+			
+OK			saml:Assertion (IDCard)
+				saml:Issuer
+OK				saml:Subject
+				saml:Conditions
+				
+			
+OK				saml:AttributeStatement (IDCardData)
+					saml:Attribute
+					...
+			
+OK				saml:AttributeStatement (UserLog)
+					saml:Attribute
+					...
+			
+OK  			saml:AttributeStatement (SystemLog)
+					saml:Attribute
+					...
+					
+OK		medcom:Header
+			medcom:SecurityLevel	1,2,3,4,5
+			medcom:Linking
+				medcom:FlowID
+				medcom:MessageID	
+			medcom:RequestPriority [AKUT, HASTER, RUTINE]
+
+	
+	soap:body
+	
+		<service>
+	
+Encoding
+--------
+Encoding MUST be UTF-8
+
+Assertion
+---------
+	Issuer: Name of issuer
+
+	Subject
+		NameID: CPR number (OIO), CPR number (MEDCOM), provider number, P number, SKS code, CVR number
+			Format: http://rep.oio.dk/cpr.dk/xml/schemas/core/2005/03/18/CPR_PersonCivilRegistrationIdentifier.xsd
+				medcom:cprnumber 	- Danish Central Person Registry id.
+				medcom:ynumber		- Danish authorized Healthcare provider id.
+				medcom:pnumber		- Danish production unit number from the central company registry (sub-entry to CVR number)
+				medcom:skscode		- (Old) Danish hospital unit code.
+				medcom:cvrnumber	- Central Company (Virksomhed) Reistry
+		SubjectConfirmation
+			ConfirmationMethod: urn:oasis:names:tc:SAML:2.0:cm:holder-of-key
+
+			saml:ConfirmationData
+				KeyInfo
+					KeyName		Name of wsu:id of ds:Signature element
+		
+			or
+			
+			saml:SubjectConfirmationData
+				wsse:UsernameToken
+					wsse:Username
+					wsse:
+		
+		saml:Conditions
+					
+
+Attributes for AttributeStatement
+----------------------------------									
+sosi:IDCardID			
+sosi:IDCardVersion			1.0		
+sosi:IDCardType				"user", "system"
+sosi:AuthenticationLevel
+sosi:OCESCertHash SHA-1 hash of certificate (optional)
+
+medcom:UserCivilRegistrationNumber
+medcom:UserGivenName
+medcom:UserSurName
+medcom:UserEmailAddress
+medcom:UserRole
+medcom:UserOccupation
+medcom:UserAuthorizationCode
+
+medcom:ITSystemName
+medcom:CareProviderID
+medcom:CareProviderName
+
+Security Levels
+---------------
+5: Whole message signed using MOCES signature. 		(Hele meddelelsen signeret med MOCES-signatur)
+4: ID card signed using MOCES signature. 			(Id-kort signeret med MOCES-medarbejdersignatur)
+3: ID card signed using VOCES signature. 			(Id-kort signeret med VOCES-virksomhedssignatur)
+2: Username and password authentication.
+1: No identification.
+
+MedCom Header
+--------------
+SecurityLevel as per above.
+FlowID is a server assigned session ID.
+MessageID is a unique number assigned by the client.
+
+
+
+Nets/DanID OCES-II certifikat eksempler
+---------------------------------------
+https://www.nets.eu/dk-da/kundeservice/nemid-tjenesteudbyder/NemID-tjenesteudbyderpakken/Pages/OCES-II-certifikat-eksempler.aspx
+
+You can use following commands to extract public/private key from a PKCS#12 container:
+PKCS#1 Private key
+openssl pkcs12 -in yourP12File.pfx -nocerts -out privateKey.pem
+Certificates:
+openssl pkcs12 -in yourP12File.pfx -clcerts -nokeys -out publicCert.pem
+
+Bytes in python
+----------------
+https://medium.com/@andreacolangelo/strings-unicode-and-bytes-in-python-3-everything-you-always-wanted-to-know-27dc02ff2686
+https://stackoverflow.com/questions/43468485/python-signxml-valueerror-could-not-unserialize-key-data
+
+Load/save RSA keys
+------------------
+https://stackoverflow.com/questions/45146504/python-cryptography-module-save-load-rsa-keys-to-from-file?rq=1
+
+
+
+
