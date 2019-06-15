@@ -1,26 +1,59 @@
 from datetime import datetime
 
-__all__ = ['Identifier', 'PatientIdentifier', 'AdhocQueryRequest', 'RetrieveDocumentSetRequest',
-           'XDS_DE_PATIENT_ID', 'XDS_DE_STATUS', 'XDS_DE_TYPE_CODE', 'XDS_DE_SERVICE_START_TIME_FROM',
-           'XDS_DE_SERVICE_STOP_TIME_TO', 'XDS_DE_TYPE',
+__all__ = [
+           'AdhocQueryRequest', 'ResponseOption', 'AdhocQuery',
+
+           'RetrieveDocumentSetRequest', 'DocumentRequest',
+
+           'ProvideAndRegisterDocumentSetRequest',
+           'SubmitObjectsRequest', 'Document',
+           'RegistryObjectList', 'Association',
+           'ExtrinsicObject', 'Slot', 'Classification', 'Name', 'ExternalIdentifier', 'RegistryPackage',
+
+           'Identifier', 'PatientIdentifier', 'OrganizationIdentifier',
+
+           'XDS_DE_PN_PATIENT_ID', 'XDS_DE_PN_STATUS', 'XDS_DE_PN_TYPE_CODE', 'XDS_DE_PN_SERVICE_START_TIME_FROM',
+           'XDS_DE_PN_SERVICE_STOP_TIME_TO', 'XDS_DE_PN_TYPE',
+
+           'XDS_DE_AUTHOR', 'XDS_DE_CLASS_CODE', 'XDS_DE_FORMAT_CODE', 'XDS_DE_HEALTHCARE_FACILITY_CODE',
+           'XDS_DE_PRACTICE_SETTING_CODE', 'XDS_DE_TYPE_CODE', 'XDS_DE_PATIENT_ID', 'XDS_DE_UNIQUE_ID',
+           'XDS_DE_CONTENT_TYPE_CODE',
+
+           'XDS_SS_SOURCE_ID', 'XDS_SS_UNIQUE_ID', 'XDS_SS_PATIENT_ID', 'XDS_SS_AUTHOR', 'XDS_CN_SUBMISSION_SET',
+
            'XDS_TYPE_STABLE', 'XDS_TYPE_ON_DEMAND',
+
            'XDS_QUERY_ID_FIND_DOCUMENTS',
+
            'XDS_DOCUMENT_STATUS_DEPRECATED', 'XDS_DOCUMENT_STATUS_APPROVED',
-           'AUTHORITY_LOINC',
-           'LOINC_APPOINTMENT']
+
+           'XDS_RESPONSE_OPTION_LEAF_CLASS', 'XDS_RESPONSE_OPTION_OBJECT_REF',
+
+           'XDS_AT_HAS_MEMBER',
+
+           'XDS_AUTHORITY_SOR', 'XDS_AUTHORITY_CPR',
+
+           'CS_OID_DK_IHE_FORMAT_CODE', 'CS_OID_DK_IHE_CLASS_CODE', 'CS_OID_SNOMED', 'CS_OID_LOINC',
+
+           'LOINC_APPOINTMENT'
+           ]
+
 
 #
-# XDSDocumentEntry
+# XDSDocumentEntry Parameter Names (used in AdhocQueryRequest).
 # See https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol2a.pdf
 # Section 3.18.4.1.2.3.7.1 FindDocuments
 #
-XDS_DE_PATIENT_ID = "$XDSDocumentEntryPatientId"
-XDS_DE_STATUS = "$XDSDocumentEntryStatus"
-XDS_DE_TYPE_CODE = "$XDSDocumentEntryTypeCode"
-XDS_DE_SERVICE_START_TIME_FROM = "$XDSDocumentEntryServiceStartTimeFrom"
-XDS_DE_SERVICE_STOP_TIME_TO = "$XDSDocumentEntryServiceStopTimeTo"
-XDS_DE_TYPE = "$XDSDocumentEntryType"
+XDS_DE_PN_PATIENT_ID = "$XDSDocumentEntryPatientId"
+XDS_DE_PN_STATUS = "$XDSDocumentEntryStatus"
+XDS_DE_PN_TYPE_CODE = "$XDSDocumentEntryTypeCode"
+XDS_DE_PN_SERVICE_START_TIME_FROM = "$XDSDocumentEntryServiceStartTimeFrom"
+XDS_DE_PN_SERVICE_STOP_TIME_TO = "$XDSDocumentEntryServiceStopTimeTo"
+XDS_DE_PN_TYPE = "$XDSDocumentEntryType"
 
+#
+# DocumentEntryType / objectType
+#
 XDS_TYPE_STABLE = "urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1"
 XDS_TYPE_ON_DEMAND = "urn:uuid:34268e47-fdf5-41a6-ba33-82133c465248"
 
@@ -42,11 +75,66 @@ XDS_DOCUMENT_STATUS_DEPRECATED = "urn:oasis:names:tc:ebxml-regrep:StatusType:Dep
 XDS_RESPONSE_OPTION_LEAF_CLASS = "LeafClass"
 XDS_RESPONSE_OPTION_OBJECT_REF = "ObjectRef"
 
-AUTHORITY_LOINC = "2.16.840.1.113883.6.1"
+XDS_AT_HAS_MEMBER = "urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember"
+
+# DocumentEntry constants
+XDS_DE_AUTHOR = "urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d"
+XDS_DE_CLASS_CODE = "urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a"
+XDS_DE_FORMAT_CODE = "urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d"
+XDS_DE_HEALTHCARE_FACILITY_CODE = "urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1"
+XDS_DE_PRACTICE_SETTING_CODE = "urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead"
+XDS_DE_TYPE_CODE = "urn:uuid:f0306f51-975f-434e-a61c-c59651d33983"
+XDS_DE_PATIENT_ID = "urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427"
+XDS_DE_UNIQUE_ID = "urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab"
+XDS_DE_CONTENT_TYPE_CODE = "urn:uuid:aa543740-bdda-424e-8c96-df4873be8500"
+
+# SubmissionSet constants
+XDS_SS_AUTHOR = "urn:uuid:a7058bb9-b4e4-4307-ba5b-e3f0ab85e12d"
+XDS_SS_PATIENT_ID = "urn:uuid:6b5aea1a-874d-4603-a4bc-96a0a7b38446"
+XDS_SS_UNIQUE_ID = "urn:uuid:96fdda7c-d067-4183-912e-bf5ee74998a8"
+XDS_SS_SOURCE_ID = "urn:uuid:554ac39e-e3fe-47fe-b233-965d2a147832"
+
+XDS_CN_SUBMISSION_SET = "urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd"
+
+# Classification Systems.
+CS_OID_DK_IHE_CLASS_CODE = "1.2.208.184.100.9"
+CS_OID_DK_IHE_FORMAT_CODE = "1.2.208.184.100.10"
+CS_OID_SNOMED = "2.16.840.1.113883.6.96"
+CS_OID_LOINC = "2.16.840.1.113883.6.1"
+
+# Misc. codes from code systems.
 LOINC_APPOINTMENT = "39289-4"
 
-URI_QUERY30 = "urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0"
-URI_RIM30 = "urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0"
+
+class AssigningAuthority():
+    def __init__(self, oid):
+        self._oid = oid
+        self._id_type = "ISO"
+
+    def __str__(self):
+        return "&{}&{}".format(str(self._oid), str(self._id_type))
+
+    @property
+    def oid(self):
+        return self._oid
+
+    @property
+    def type(self):
+        return self._id_type
+
+
+#
+# The Danish Central Person Registry (CPR) holds a unique id for people in
+# Denmark. Compares to a social security number (SSN) in other countries.
+#   See http://oid-info.com/get/1.2.208.176.1.2
+#
+XDS_AUTHORITY_CPR = AssigningAuthority("1.2.208.176.1.2")
+
+# The Danish Healthcare Organization Registry (SOR) assigns identities to
+# organizational units in within the healthcare sector.
+#   See http://oid-info.com/get/1.2.208.176.1.1
+#
+XDS_AUTHORITY_SOR = AssigningAuthority("1.2.208.176.1.1")
 
 
 class Identifier:
@@ -61,116 +149,235 @@ class Identifier:
 
 class PatientIdentifier:
 
-    def __init__(self, patient_id, scheme=None):
-        self.__patient_id = patient_id
-        if scheme is None:
-            self.__scheme = "&1.2.208.176.1.2&ISO"
-        else:
-            self.__scheme = scheme
+    def __init__(self, patient_id, authority=None):
+        self._patient_id = patient_id
+        self._authority = authority if authority is not None else XDS_AUTHORITY_CPR
 
     def __str__(self):
-        return "%s^^^%s" % (self.__patient_id, self.__scheme)
-
-
-class AdhocQueryRequest(dict):
-
-    def __init__(self, *args, **kwargs):
-        super(AdhocQueryRequest, self).__init__(*args, **kwargs)
-        self.__response_option = XDS_RESPONSE_OPTION_LEAF_CLASS
-        self.__query_id = XDS_QUERY_ID_FIND_DOCUMENTS
-        self.__query_status = None
+        # Encoded as CX, see table 4.1-3 Data Types in IHE_ITI_TF_Rev8-0_Vol3_FT_2011-08-19.pdf
+        return "{}^^^{}".format(str(self._patient_id), str(self._authority))
 
     @property
-    def query_id(self):
-        return self.__query_id
-
-    @query_id.setter
-    def query_id(self, query_id):
-        self.__query_id = query_id
+    def patient_id(self):
+        return self._patient_id
 
     @property
-    def response_option(self):
-        return self.__response_option
+    def authority(self):
+        return self._authority
 
-    @response_option.setter
-    def response_option(self, option):
-        self.__response_option = option
+
+class OrganizationIdentifier:
+
+    def __init__(self, name, organization_id, authority=None):
+        self._name = name
+        self._id = organization_id
+        self._authority = authority if authority is not None else XDS_AUTHORITY_SOR
+
+    def __str__(self):
+        # Encoded as XON, see table 4.1-3 Data Types in IHE_ITI_TF_Rev8-0_Vol3_FT_2011-08-19.pdf
+        return "{}^^^^^{}^^^^{}".format(str(self._name), str(self._authority), str(self._id))
 
     @property
-    def query_status(self):
-        return self.__query_status
+    def id(self):
+        return self._id
 
-    @query_status.setter
-    def query_status(self, status):
-        self.__query_status = status
+    @property
+    def name(self):
+        return self._name
 
-    # def build(self):
-    #
-    #     builder = XmlUtil.Builder()
-    #     builder.namespace({None: URI_QUERY30, "rim": URI_RIM30})
-    #
-    #     query_attr = {"id": self.__query_id}
-    #     if self.__query_status is not None:
-    #         query_attr["status"] = self.__query_status
-    #
-    #     builder.element("AdhocQueryRequest") \
-    #                 .value("ResponseOption", None, {"returnType": self.response_option, "returnComposedObjects": "true"}) \
-    #                 .element("rim:AdhocQuery", query_attr)
-    #
-    #     for key in self.keys():
-    #         builder.element("rim:Slot", {"name": key})
-    #
-    #         value = self[key]
-    #         if isinstance(value, list):
-    #             list_of_values = value
-    #             index = 0
-    #             value = "("
-    #             for e in list_of_values:
-    #                 if index > 0:
-    #                     value += ","
-    #                 value += "'%s'" % str(e)
-    #                 index += 1
-    #             value += ")"
-    #         else:
-    #             if isinstance(value, datetime):
-    #                 value = value.strftime("%Y%m%d%H%M%S")
-    #             else:
-    #                 value = str(value)
-    #
-    #         builder.element("rim:ValueList") \
-    #                     .value("rim:Value", value) \
-    #                     .up() \
-    #                     .up()
-    #
-    #     return builder.root()
+    @property
+    def authority(self):
+        return self._authority
 
 
-class RetrieveDocumentSetRequest(list):
+class AdhocQueryRequest:
 
-    def __init__(self, *args, **kwargs):
-        super(RetrieveDocumentSetRequest, self).__init__(*args, **kwargs)
-        pass
+    def __init__(self, response_option=None, adhoc_query=None):
+        self.response_option = response_option
+        self.adhoc_query = adhoc_query
+
+
+class ResponseOption:
+
+    def __init__(self, return_type, return_composite_objects):
+        self.return_type = return_type
+        self.return_composite_objects = return_composite_objects
+
+
+class AdhocQuery:
+
+    def __init__(self, query_id=None):
+        self.query_id = query_id
+        self._slots = list()
+
+    @property
+    def slots(self):
+        return self._slots
+
+
+class DocumentRequest:
+
+    def __init__(self, home_community_id, repository_unique_id, document_unique_id):
+        self.home_community_id = home_community_id
+        self.repository_unique_id = repository_unique_id
+        self.document_unique_id = document_unique_id
+
+
+class RetrieveDocumentSetRequest:
+
+    def __init__(self):
+        self._document_requests = list()
+
+    @property
+    def document_requests(self):
+        return self._document_requests
 
     def add_document_request(self, home_community_id, repository_unique_id, document_unique_id):
-        self.append({"HomeCommunityId": home_community_id,
-                     "RepositoryUniqueId": repository_unique_id,
-                     "DocumentUniqueId": document_unique_id})
+        self._document_requests.append(DocumentRequest(home_community_id, repository_unique_id, document_unique_id))
 
 
+class ProvideAndRegisterDocumentSetRequest:
+    def __init__(self):
+        self.submit_object_request = None
+        self._documents = list()
 
-# def build_retrieve_document_set_request(rdsr):
-#
-#     builder = XmlUtil.Builder()
-#     builder.namespace({None: "urn:ihe:iti:xds-b:2007"})
-#
-#     builder.element("RetrieveDocumentSetRequest")
-#
-#     for dr in rdsr:
-#         builder.element("DocumentRequest") \
-#                     .value("HomeCommunityId", dr["HomeCommunityId"]) \
-#                     .value("RepositoryUniqueId", dr["RepositoryUniqueId"]) \
-#                     .value("DocumentUniqueId", dr["DocumentUniqueId"]) \
-#                     .up()
-#
-#     return builder.root()
+    @property
+    def documents(self):
+        return self._documents
 
+
+class SubmitObjectsRequest:
+    def __init__(self, submit_object_request_id=None, comment=None):
+        self.id = submit_object_request_id
+        self.comment = comment
+        self.registry_object_list = None
+
+
+class RegistryObjectList:
+
+    def __init__(self):
+        self._extrinsic_objects = list()
+        self._registry_packages = list()
+        self._classifications = list()
+        self._associations = list()
+
+    @property
+    def extrinsic_objects(self):
+        return self._extrinsic_objects
+
+    @property
+    def registry_packages(self):
+        return self._registry_packages
+
+    @property
+    def classifications(self):
+        return self._classifications
+
+    @property
+    def associations(self):
+        return self._associations
+
+
+class Association:
+
+    def __init__(self, association_id, association_type, source_object, target_object, status):
+        self.association_id = association_id
+        self.association_type = association_type
+        self.source_object = source_object
+        self.target_object = target_object
+        self.status = status
+        self._slots = list()
+
+    @property
+    def slots(self):
+        return self._slots
+
+
+class ExtrinsicObject:
+
+    def __init__(self, extrinsic_object_id, status, object_type, lid):
+        self.extrinsic_object_id = extrinsic_object_id
+        self.status = status
+        self.object_type = object_type
+        self.lid = lid
+        self._slots = list()
+        self._classifications = list()
+        self._external_identifiers = list()
+
+    @property
+    def slots(self):
+        return self._slots
+
+    @property
+    def classifications(self):
+        return self._classifications
+
+    @property
+    def external_identifiers(self):
+        return self._external_identifiers
+
+
+class Slot:
+
+    def __init__(self, name, value):
+        self.name = name
+        self.value = value
+
+
+class Classification:
+    def __init__(self, classification_id, classified_object, classification_scheme=None, node_representation=None,
+                 classification_node=None, slot=None, name=None):
+        self.classification_id = classification_id
+        self.classified_object = classified_object
+        self.classification_scheme = classification_scheme
+        self.node_represention = node_representation
+        self.classification_node = classification_node
+        self.slot = slot
+        self.name = name
+
+
+class Name:
+    def __init__(self, value, language=None, charset=None):
+        self.value = value
+        self.language = language
+        self.charset = charset
+
+
+class ExternalIdentifier:
+
+    def __init__(self, external_identifier_id, registry_object, identification_scheme, value, name=None, slot=None):
+        self.external_identifier_id = external_identifier_id
+        self.registry_object = registry_object
+        self.identification_scheme = identification_scheme
+        self.value = value
+        self.name = name
+        self.slot = slot
+
+
+class RegistryPackage:
+
+    def __init__(self, registry_package_id, status, lid, name=None):
+        self.registry_package_id = registry_package_id
+        self.status = status
+        self.lid = lid
+        self._slots = list()
+        self.name = name
+        self._classifications = list()
+        self._external_identifiers = list()
+
+    @property
+    def slots(self):
+        return self._slots
+
+    @property
+    def classifications(self):
+        return self._classifications
+
+    @property
+    def external_identifiers(self):
+        return self._external_identifiers
+
+
+class Document:
+    def __init__(self):
+        pass

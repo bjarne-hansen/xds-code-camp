@@ -16,7 +16,7 @@ from pyseal.hsuid import HsuidHeader, \
     HSUID_CITIZEN_USER_RELATION
 
 import xds.xml
-from xds.model import RetrieveDocumentSetRequest
+from xds.model import *
 
 from examples.pyseal_sts import get_sts_assertion
 
@@ -46,9 +46,9 @@ hsuid_header[HSUID_CITIZEN_USER_RELATION] = "nsi:Citizen"
 
 # Build RetriveDocumentSetRequest to fetch one document.
 rdsr = RetrieveDocumentSetRequest()
-rdsr.add_document_request("urn:oid:1.2.208.176.43210.8.20.11",
-                          "1.2.208.176.43210.8.20.11",
-                          "1.2.208.184^0762074171766375104.2674916774698055898.7649316548312")
+rdsr.add_document_request("urn:oid:1.2.208.176.43210.8.20.11",                                  # HomeCommunityId (test2) TODO: Wrong.
+                          "1.2.208.176.43210.8.20.11",                                          # RepositoryUniqueId (test2)
+                          "1.2.208.184^0762074171766375104.2674916774698055898.7649316548312")  # DocumentUniqueId (MEDCOM)
 
 rdsr_element = xds.xml.to_xml(rdsr)
 

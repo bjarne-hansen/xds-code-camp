@@ -292,7 +292,7 @@ def to_xml(obj):
         #       ...
         #
 
-        header_element = xml.Element("HsuidHeader", nsmap={prefix_hsuid: uri_hsuid})
+        header_element = xml.Element(xml.QName(uri_hsuid, "HsuidHeader"), nsmap={prefix_hsuid: uri_hsuid})
 
         attrs = dict()
         attrs["Version"] = "2.0"
@@ -302,16 +302,16 @@ def to_xml(obj):
         assertion_element = xml.SubElement(header_element, xml.QName(uri_hsuid, "Assertion"), attrs)
 
         if obj.issuer is not None:
-            issuer_element = xml.SubElement(assertion_element, xml.QName(prefix_hsuid, "Issuer"))
+            issuer_element = xml.SubElement(assertion_element, xml.QName(uri_hsuid, "Issuer"))
             issuer_element.text = obj.issuer
 
         attribute_statement_element = \
-            xml.SubElement(assertion_element, xml.QName(prefix_hsuid, "AttributeStatement"), {"id": "HSUIDData"})
+            xml.SubElement(assertion_element, xml.QName(uri_hsuid, "AttributeStatement"), {"id": "HSUIDData"})
 
         for key in obj.keys():
             attribute_element = \
-                xml.SubElement(attribute_statement_element, xml.QName(prefix_hsuid, "Attribute"), {"Name": key})
-            attribute_value_element = xml.SubElement(attribute_element, xml.QName("AttributeValue"))
+                xml.SubElement(attribute_statement_element, xml.QName(uri_hsuid, "Attribute"), {"Name": key})
+            attribute_value_element = xml.SubElement(attribute_element, xml.QName(uri_hsuid, "AttributeValue"))
             attribute_value_element.text = obj[key]
 
         return header_element
@@ -351,7 +351,7 @@ prefix_wsa = "wsa"
 uri_medcom = "http://www.medcom.dk/dgws/2006/04/dgws-1.0.xsd"
 prefix_medcom = "medcom"
 
-prefix_hsuid = "hsuid"
+prefix_hsuid = None
 uri_hsuid = "http://www.nsi.dk/hsuid/2016/08/hsuid-1.1.xsd"
 
 

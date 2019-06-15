@@ -1,10 +1,10 @@
 import time
 import requests
+from copy import deepcopy
 
 from uuid import uuid4
 from lxml import etree as xml
 
-from copy import deepcopy
 from signxml import XMLVerifier
 
 import pyseal
@@ -68,7 +68,8 @@ def verify_signature(envelope_element, certificate_data):
 
         nodes = envelope_element.xpath("//saml:Assertion", namespaces={pyseal.xml.prefix_saml: pyseal.xml.uri_saml})
         if len(nodes) > 0:
-            assertion_element_copy = deepcopy(nodes[0])
+            # deepcopy(nodes[0])
+            assertion_element_copy = nodes[0]
             verified_data = XMLVerifier().verify(assertion_element_copy, x509_cert=certificate_data).signed_xml
             return verified_data
         else:
@@ -91,17 +92,20 @@ def main():
     # Create the DGWS request using the profiled WS-Security header.
     security = create_dgws_header(certificate_data, key_data)
     envelope = create_dgws_request(security)
-    envelope_element = pyseal.xml.to_xml(envelope)
 
+    # Convert model classes to XML (DOM).
+    envelope_element = pyseal.xml.to_xml(envelope)
 
     # Just for fun try and verify the signature ...
     verify_signature(envelope_element, certificate_data)
 
     print("Request:")
     print("--------")
+    # Convert XML structure to string ...
     print(xml.tostring(envelope_element, pretty_print=True).decode("utf-8"))
     soap_request = xml.tostring(envelope_element).decode("utf-8")
     start_time = time.time()
+    # Send request to our simple server ...
     response = requests.post("http://localhost:5000/dgws", data=soap_request)
     exec_time = round((time.time() - start_time) * 1000)
     print("Response:")

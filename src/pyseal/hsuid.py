@@ -46,7 +46,7 @@ class HsuidHeader(dict):
 
     @property
     def issue_instant(self):
-        return self.issue_instant
+        return self.__issue_instant
 
     @issue_instant.setter
     def issue_instant(self, instant):

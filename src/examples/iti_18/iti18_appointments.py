@@ -2,6 +2,7 @@ from lxml import etree as xml
 from datetime import datetime
 import time
 import requests
+from uuid import uuid4
 
 import pyseal
 import pyseal.util
@@ -16,10 +17,7 @@ from pyseal.hsuid import HsuidHeader, \
     HSUID_CITIZEN_USER_RELATION
 
 import xds
-from xds.model import AdhocQueryRequest, AdhocQuery, ResponseOption, Slot, PatientIdentifier, Identifier, \
-    XDS_RESPONSE_OPTION_LEAF_CLASS, XDS_DE_PN_PATIENT_ID, XDS_DE_PN_STATUS, XDS_DE_PN_TYPE_CODE, \
-    XDS_DE_PN_SERVICE_START_TIME_FROM, XDS_DE_PN_SERVICE_STOP_TIME_TO, XDS_DE_PN_TYPE, \
-    XDS_TYPE_ON_DEMAND, XDS_DOCUMENT_STATUS_APPROVED, CS_OID_LOINC, LOINC_APPOINTMENT
+from xds.model import *
 
 from examples.pyseal_sts import get_sts_assertion
 
@@ -52,16 +50,19 @@ def main():
     # Build the XDS AdhocQueryRequest
     adhoc_query_request = AdhocQueryRequest()
 
+    # Add ResponseOption
     response_option = ResponseOption(XDS_RESPONSE_OPTION_LEAF_CLASS, "true")
     adhoc_query_request.response_option = response_option
 
-    adhoc_query = AdhocQuery()
+    # Add AddhocQuery
+    adhoc_query = AdhocQuery(XDS_QUERY_ID_FIND_DOCUMENTS)
     adhoc_query.slots.append(Slot(XDS_DE_PN_PATIENT_ID, PatientIdentifier("2512489996")))
     adhoc_query.slots.append(Slot(XDS_DE_PN_STATUS, [XDS_DOCUMENT_STATUS_APPROVED]))
     adhoc_query.slots.append(Slot(XDS_DE_PN_TYPE_CODE, [Identifier(LOINC_APPOINTMENT, CS_OID_LOINC)]))
     adhoc_query.slots.append(Slot(XDS_DE_PN_SERVICE_START_TIME_FROM, datetime(2017, 12, 31)))
     adhoc_query.slots.append(Slot(XDS_DE_PN_SERVICE_STOP_TIME_TO, datetime(2018, 12, 31)))
     adhoc_query.slots.append(Slot(XDS_DE_PN_TYPE, XDS_TYPE_ON_DEMAND))
+    adhoc_query_request.adhoc_query = adhoc_query
 
     # Convert to XML ...
     adhoc_query_request_element = xds.xml.to_xml(adhoc_query_request)

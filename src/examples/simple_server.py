@@ -34,6 +34,17 @@ def root():
 __cert = pyseal.x509.load_certificate_data("etc/FOCES_cert.pem")
 # __cert = open("etc/MOCES_cpr_gyldig.pem", "rt").read().encode("ascii")
 
+@app.route("/multipart", methods=["POST"])
+def multipart():
+
+    for h, v in request.headers.items():
+        print("{}: {}".format(h, v))
+
+    print("Files: {}".format(len(request.files)))
+    print("Data:\n{}".format(request.data.decode("utf-8")))
+
+    return Response(status=200)
+
 
 @app.route("/dgws", methods=["POST"])
 def dgws():
