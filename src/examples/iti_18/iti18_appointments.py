@@ -16,10 +16,10 @@ from pyseal.hsuid import HsuidHeader, \
     HSUID_CITIZEN_USER_RELATION
 
 import xds
-from xds.model import AdhocQueryRequest, PatientIdentifier, Identifier, \
-    XDS_RESPONSE_OPTION_LEAF_CLASS, XDS_DE_PATIENT_ID, XDS_DE_STATUS, XDS_DE_TYPE_CODE, \
-    XDS_DE_SERVICE_START_TIME_FROM, XDS_DE_SERVICE_STOP_TIME_TO, XDS_DE_TYPE, \
-    XDS_TYPE_ON_DEMAND, XDS_DOCUMENT_STATUS_APPROVED, LOINC_APPOINTMENT, AUTHORITY_LOINC
+from xds.model import AdhocQueryRequest, AdhocQuery, ResponseOption, Slot, PatientIdentifier, Identifier, \
+    XDS_RESPONSE_OPTION_LEAF_CLASS, XDS_DE_PN_PATIENT_ID, XDS_DE_PN_STATUS, XDS_DE_PN_TYPE_CODE, \
+    XDS_DE_PN_SERVICE_START_TIME_FROM, XDS_DE_PN_SERVICE_STOP_TIME_TO, XDS_DE_PN_TYPE, \
+    XDS_TYPE_ON_DEMAND, XDS_DOCUMENT_STATUS_APPROVED, CS_OID_LOINC, LOINC_APPOINTMENT
 
 from examples.pyseal_sts import get_sts_assertion
 
@@ -50,17 +50,21 @@ def main():
     hsuid_header[HSUID_CITIZEN_USER_RELATION] = "nsi:Citizen"
 
     # Build the XDS AdhocQueryRequest
-    query = AdhocQueryRequest()
-    query.response_option = XDS_RESPONSE_OPTION_LEAF_CLASS
-    # query.response_option = XDS_RESPONSE_OPTION_OBJECT_REF
-    query[XDS_DE_PATIENT_ID] = PatientIdentifier("2512489996")
-    query[XDS_DE_STATUS] = [XDS_DOCUMENT_STATUS_APPROVED]
-    query[XDS_DE_TYPE_CODE] = [Identifier(LOINC_APPOINTMENT, AUTHORITY_LOINC)]
-    query[XDS_DE_SERVICE_START_TIME_FROM] = datetime(2017, 12, 31)
-    query[XDS_DE_SERVICE_STOP_TIME_TO] = datetime(2018, 12, 31)
-    query[XDS_DE_TYPE] = XDS_TYPE_ON_DEMAND
+    adhoc_query_request = AdhocQueryRequest()
 
-    query_element = xds.xml.to_xml(query)
+    response_option = ResponseOption(XDS_RESPONSE_OPTION_LEAF_CLASS, "true")
+    adhoc_query_request.response_option = response_option
+
+    adhoc_query = AdhocQuery()
+    adhoc_query.slots.append(Slot(XDS_DE_PN_PATIENT_ID, PatientIdentifier("2512489996")))
+    adhoc_query.slots.append(Slot(XDS_DE_PN_STATUS, [XDS_DOCUMENT_STATUS_APPROVED]))
+    adhoc_query.slots.append(Slot(XDS_DE_PN_TYPE_CODE, [Identifier(LOINC_APPOINTMENT, CS_OID_LOINC)]))
+    adhoc_query.slots.append(Slot(XDS_DE_PN_SERVICE_START_TIME_FROM, datetime(2017, 12, 31)))
+    adhoc_query.slots.append(Slot(XDS_DE_PN_SERVICE_STOP_TIME_TO, datetime(2018, 12, 31)))
+    adhoc_query.slots.append(Slot(XDS_DE_PN_TYPE, XDS_TYPE_ON_DEMAND))
+
+    # Convert to XML ...
+    adhoc_query_request_element = xds.xml.to_xml(adhoc_query_request)
 
     #
     # Wrap everything in a SOAP envelope
@@ -77,7 +81,7 @@ def main():
     #     AdHocQueryRequest
     #       ...
     #
-    envelope = Envelope([security, medcom_header, hsuid_header], query_element)
+    envelope = Envelope([security, medcom_header, hsuid_header], adhoc_query_request_element)
     envelope_element = pyseal.xml.to_xml(envelope)
     request_str = xml.tostring(envelope_element).decode()
 
@@ -118,18 +122,30 @@ def main():
 
         evaluator = xml.XPathElementEvaluator(e, namespaces=ns)
 
+        # Extract data from each ExtrinsicObject.
         status = e.get("status")
-        homeCommunityId = e.get("home")
-        repositoryUniqueId = pyseal.util.first(evaluator("rim:Slot[@name='repositoryUniqueId']/rim:ValueList/rim:Value/text()"))
-        uniqueId = pyseal.util.first(evaluator("rim:ExternalIdentifier[rim:Name/rim:LocalizedString/"
-                                        "@value='XDSDocumentEntry.uniqueId']/@value"))
-        patientId = pyseal.util.first(evaluator("rim:ExternalIdentifier[rim:Name/rim:LocalizedString/"
-                                         "@value='XDSDocumentEntry.patientId']/@value"))
-        serviceStartTime = pyseal.util.first(evaluator("rim:Slot[@name='serviceStartTime']/rim:ValueList/rim:Value/text()"))
-        serviceStopTime = pyseal.util.first(evaluator("rim:Slot[@name='serviceStopTime']/rim:ValueList/rim:Value/text()"))
+        home_community_id = e.get("home")
+        repository_unique_id = pyseal.util.first(evaluator("rim:Slot[@name='repositoryUniqueId']/"
+                                                           "rim:ValueList/rim:Value/text()"))
+        unique_id = pyseal.util.first(evaluator("rim:ExternalIdentifier[rim:Name/rim:LocalizedString/"
+                                                "@value='XDSDocumentEntry.uniqueId']/@value"))
+        patient_id = pyseal.util.first(evaluator("rim:ExternalIdentifier[rim:Name/rim:LocalizedString/"
+                                                 "@value='XDSDocumentEntry.patientId']/@value"))
+        service_start_time = pyseal.util.first(evaluator("rim:Slot[@name='serviceStartTime']/"
+                                                         "rim:ValueList/rim:Value/text()"))
+        service_stop_time = pyseal.util.first(evaluator("rim:Slot[@name='serviceStopTime']/"
+                                                        "rim:ValueList/rim:Value/text()"))
 
-        if homeCommunityId is not None:
-            print(idx, ":", status, ",", patientId, ",", serviceStartTime, ",", serviceStopTime, "\n    ",  homeCommunityId, ",", repositoryUniqueId, ",", uniqueId)
+        # Print information about response.
+        if home_community_id is not None:
+            print(idx, ":",
+                  status, ",",
+                  patient_id, ",",
+                  service_start_time, ",",
+                  service_stop_time, "\n    ",
+                  home_community_id, ",",
+                  repository_unique_id, ",",
+                  unique_id)
         else:
             print(idx, "Invalid meta-data entry.")
 

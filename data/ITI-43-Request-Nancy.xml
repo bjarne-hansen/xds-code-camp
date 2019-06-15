@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:medcom="http://www.medcom.dk/dgws/2006/04/dgws-1.0.xsd" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:sosi="http://www.sosi.dk/sosi/2006/04/sosi-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<s:Header>
+		<wsse:Security><wsu:Timestamp><wsu:Created>2019-05-28T08:12:49Z</wsu:Created></wsu:Timestamp><saml:Assertion IssueInstant="2019-05-28T08:07:31Z" Version="2.0" id="IDCard"><saml:Issuer>TEST2-NSP-STS</saml:Issuer><saml:Subject><saml:NameID Format="medcom:other">SubjectDN={SERIALNUMBER=CVR:46837428-FID:92421325 + CN=Funktionssignatur til testmiljø (funktionscertifikat), O=Statens Serum Institut // CVR:46837428, C=DK},IssuerDN={CN=TRUST2408 Systemtest XXII CA, O=TRUST2408, C=DK},CertSerial={1495058032}</saml:NameID><saml:SubjectConfirmation><saml:ConfirmationMethod>urn:oasis:names:tc:SAML:2.0:cm:holder-of-key</saml:ConfirmationMethod><saml:SubjectConfirmationData><ds:KeyInfo><ds:KeyName>OCESSignature</ds:KeyName></ds:KeyInfo></saml:SubjectConfirmationData></saml:SubjectConfirmation></saml:Subject><saml:Conditions NotBefore="2019-05-28T08:07:31Z" NotOnOrAfter="2019-05-29T08:07:31Z"/><saml:AttributeStatement id="IDCardData"><saml:Attribute Name="sosi:IDCardID"><saml:AttributeValue>F+y98WEcOuoNZ4KFVkxWkw==</saml:AttributeValue></saml:Attribute><saml:Attribute Name="sosi:IDCardVersion"><saml:AttributeValue>1.0.1</saml:AttributeValue></saml:Attribute><saml:Attribute Name="sosi:IDCardType"><saml:AttributeValue>system</saml:AttributeValue></saml:Attribute><saml:Attribute Name="sosi:AuthenticationLevel"><saml:AttributeValue>3</saml:AttributeValue></saml:Attribute><saml:Attribute Name="sosi:OCESCertHash"><saml:AttributeValue>a9dhuo8VWCwZ92S9MFtHegynbLk=</saml:AttributeValue></saml:Attribute></saml:AttributeStatement><saml:AttributeStatement id="SystemLog"><saml:Attribute Name="medcom:ITSystemName"><saml:AttributeValue>Kom Godt i Gang Guider</saml:AttributeValue></saml:Attribute><saml:Attribute Name="medcom:CareProviderID" NameFormat="medcom:cvrnumber"><saml:AttributeValue>46837428</saml:AttributeValue></saml:Attribute><saml:Attribute Name="medcom:CareProviderName"><saml:AttributeValue>Statens Serum Institut</saml:AttributeValue></saml:Attribute></saml:AttributeStatement><ds:Signature id="OCESSignature"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><ds:Reference URI="#IDCard"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>wnkOs4JWQXrhEtW1Wzw6w2P/4V4=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>MiJQiJIO3SdK5IYAXh8ChaYRDpUH5zjkOpegz1ZrwwsySKeq3Y387CgICbm58Ggv3qhjuRDIcnD04NLf1FQXzsapiqH3gg80OXasUXC4FCoBubwb06lIpnIDvhNNZYPcmzzQwoppmeBX83SdsAPFfsGrLseXDN96Z3O6fKop5WaMgJJDxhdiDUfhw1zasgsO8nVm0mkQcGvPODweMDhbVQiJxSMiiuiHAyEuOB9Qu5oMgiz02slQvdUS8efplq4YP1M47jV6g71CU903Vav8DZEJGn4EJKS1xabP4ypGjYMuSOmX3wkU6WIEsfYOQZl7wIYK3cya9X/W7cxs9lK1Xw==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>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</ds:X509Certificate></ds:X509Data></ds:KeyInfo></ds:Signature></saml:Assertion></wsse:Security>
+		<Header xmlns="http://www.medcom.dk/dgws/2006/04/dgws-1.0.xsd">
+			<SecurityLevel>3</SecurityLevel>
+			<TimeOut>1440</TimeOut>
+			<Linking>
+				<FlowID>a2df3cfd-7e1c-47c3-9fd5-8824c4e899fb</FlowID>
+				<MessageID>1acd805d-aa0b-40c5-ba6d-9746b750e406</MessageID>
+			</Linking>
+			<FlowStatus>flow_running</FlowStatus>
+			<RequireNonRepudiationReceipt>no</RequireNonRepudiationReceipt>
+		</Header>
+		<HsuidHeader xmlns="http://www.nsi.dk/hsuid/2016/08/hsuid-1.1.xsd">
+			<Assertion IssueInstant="2018-10-24T12:57:29" Version="2.0" id="HSUID">
+				<Issuer>Sundhedsjournalen</Issuer>
+				<AttributeStatement id="HSUIDdata">
+					<Attribute Name="nsi:ActingUserCivilRegistrationNumber">
+						<AttributeValue>2512489996</AttributeValue>
+					</Attribute>
+					<Attribute Name="nsi:CitizenCivilRegistrationNumber">
+						<AttributeValue>2512489996</AttributeValue>
+					</Attribute>
+					<Attribute Name="nsi:UserType">
+						<AttributeValue>nsi:Citizen</AttributeValue>
+					</Attribute>
+					<Attribute Name="nsi:SystemOwnerName">
+						<AttributeValue>Sundhed.dk</AttributeValue>
+					</Attribute>
+					<Attribute Name="nsi:SystemName">
+						<AttributeValue>Sundhedsjournalen</AttributeValue>
+					</Attribute>
+					<Attribute Name="nsi:SystemVersion">
+						<AttributeValue>1.0</AttributeValue>
+					</Attribute>
+					<Attribute Name="nsi:OrgResponsibleName">
+						<AttributeValue>Sundhed.dk</AttributeValue>
+					</Attribute>
+					<Attribute Name="nsi:CitizenUserRelation">
+						<AttributeValue>nsi:Citizen</AttributeValue>
+					</Attribute>
+				</AttributeStatement>
+			</Assertion>
+		</HsuidHeader>
+	</s:Header>
+	<s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <RetrieveDocumentSetRequest xmlns="urn:ihe:iti:xds-b:2007">
+            <DocumentRequest>
+                <HomeCommunityId>urn:oid:1.2.208.176.43210.8.20.11</HomeCommunityId>
+                <RepositoryUniqueId>1.2.208.176.43210.8.20.11</RepositoryUniqueId>
+                <DocumentUniqueId>6946778998876148702.7192223840203720416.1528441845022</DocumentUniqueId>
+            </DocumentRequest>
+        </RetrieveDocumentSetRequest>
+	</s:Body>
+</s:Envelope>

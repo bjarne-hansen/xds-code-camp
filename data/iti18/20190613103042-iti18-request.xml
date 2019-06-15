@@ -1,0 +1,147 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsu:Timestamp>
+        <wsu:Created>2019-06-13T08:30:42Z</wsu:Created>
+      </wsu:Timestamp>
+      <saml:Assertion xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" IssueInstant="2019-06-13T08:25:42Z" Version="2.0" id="IDCard">
+        <saml:Issuer>TEST2-NSP-STS</saml:Issuer>
+        <saml:Subject>
+          <saml:NameID Format="medcom:other">SubjectDN={SERIALNUMBER=CVR:46837428-FID:92421325 + CN=Funktionssignatur til testmilj&#248; (funktionscertifikat), O=Statens Serum Institut // CVR:46837428, C=DK},IssuerDN={CN=TRUST2408 Systemtest XXII CA, O=TRUST2408, C=DK},CertSerial={1495058032}</saml:NameID>
+          <saml:SubjectConfirmation>
+            <saml:ConfirmationMethod>urn:oasis:names:tc:SAML:2.0:cm:holder-of-key</saml:ConfirmationMethod>
+            <saml:SubjectConfirmationData>
+              <ds:KeyInfo>
+                <ds:KeyName>OCESSignature</ds:KeyName>
+              </ds:KeyInfo>
+            </saml:SubjectConfirmationData>
+          </saml:SubjectConfirmation>
+        </saml:Subject>
+        <saml:Conditions NotBefore="2019-06-13T08:25:42Z" NotOnOrAfter="2019-06-14T08:25:42Z"/>
+        <saml:AttributeStatement id="IDCardData">
+          <saml:Attribute Name="sosi:IDCardID">
+            <saml:AttributeValue>MK9vJzMpcY8UwlWIstAxqA==</saml:AttributeValue>
+          </saml:Attribute>
+          <saml:Attribute Name="sosi:IDCardVersion">
+            <saml:AttributeValue>1.0.1</saml:AttributeValue>
+          </saml:Attribute>
+          <saml:Attribute Name="sosi:IDCardType">
+            <saml:AttributeValue>system</saml:AttributeValue>
+          </saml:Attribute>
+          <saml:Attribute Name="sosi:AuthenticationLevel">
+            <saml:AttributeValue>3</saml:AttributeValue>
+          </saml:Attribute>
+          <saml:Attribute Name="sosi:OCESCertHash">
+            <saml:AttributeValue>a9dhuo8VWCwZ92S9MFtHegynbLk=</saml:AttributeValue>
+          </saml:Attribute>
+        </saml:AttributeStatement>
+        <saml:AttributeStatement id="SystemLog">
+          <saml:Attribute Name="medcom:ITSystemName">
+            <saml:AttributeValue>XDS Code Camp</saml:AttributeValue>
+          </saml:Attribute>
+          <saml:Attribute Name="medcom:CareProviderID" NameFormat="medcom:cvrnumber">
+            <saml:AttributeValue>46837428</saml:AttributeValue>
+          </saml:Attribute>
+          <saml:Attribute Name="medcom:CareProviderName">
+            <saml:AttributeValue>Statens Serum Institut</saml:AttributeValue>
+          </saml:Attribute>
+        </saml:AttributeStatement>
+        <ds:Signature id="OCESSignature">
+          <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+            <ds:Reference URI="#IDCard">
+              <ds:Transforms>
+                <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+              </ds:Transforms>
+              <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+              <ds:DigestValue>9Wu5eqp++a4SNOKJa1zCO5JOCmc=</ds:DigestValue>
+            </ds:Reference>
+          </ds:SignedInfo>
+          <ds:SignatureValue>glea3HtllggObAuAo5t1f/D911x8p5l2Bgeb/JUAuglsdrEX85apxnDHUlfl0AAfeXkaUlEb1KcD7dg4ZDZ5MQlPVROGC7TU0DIoPd6a/zVdE7YXhoRyLa7sAuFlPzlrBo7mkWtQer5BqdJFIHRcvFM0vbTyCaazkDZ8plmaNXDI3Mn3Eb6XJcwpoZkbvdAZzEN7VxKxxb1zIRUtBth17Vk5PLkJ62N8yuev6ns4mpVZDxy7AZxcTsZCGiZ3NqN+KXq9HkIkjoDB/gZMoXyWqtVi8DOENPkfTG1q0/C4PegWulgxmnr8IbuT1vGaJf5fvp+LtyQeNmhacPbdJgSynw==</ds:SignatureValue>
+          <ds:KeyInfo>
+            <ds:X509Data>
+              <ds:X509Certificate>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</ds:X509Certificate>
+            </ds:X509Data>
+          </ds:KeyInfo>
+        </ds:Signature>
+      </saml:Assertion>
+    </wsse:Security>
+    <medcom:Header xmlns:medcom="http://www.medcom.dk/dgws/2006/04/dgws-1.0.xsd">
+      <medcom:SecurityLevel>3</medcom:SecurityLevel>
+      <medcom:Linking>
+        <medcom:MessageID>04373c54-46b8-43d5-a3b4-46da9c3d6d76</medcom:MessageID>
+      </medcom:Linking>
+      <medcom:RequireNonRepudiationReceipt>no</medcom:RequireNonRepudiationReceipt>
+    </medcom:Header>
+    <HsuidHeader xmlns="http://www.nsi.dk/hsuid/2016/08/hsuid-1.1.xsd">
+      <Assertion IssueInstant="2019-06-13T08:30:42Z" Version="2.0" id="hsuid">
+        <Issuer>XDS Code Camp Sample Code</Issuer>
+        <AttributeStatement id="HSUIDData">
+          <Attribute Name="nsi:ActingUserCivilRegistrationNumber">
+            <AttributeValue>2512489996</AttributeValue>
+          </Attribute>
+          <Attribute Name="nsi:CitizenCivilRegistrationNumber">
+            <AttributeValue>2512489996</AttributeValue>
+          </Attribute>
+          <Attribute Name="nsi:UserType">
+            <AttributeValue>nsi:Citizen</AttributeValue>
+          </Attribute>
+          <Attribute Name="nsi:SystemOwnerName">
+            <AttributeValue>Lakeside</AttributeValue>
+          </Attribute>
+          <Attribute Name="nsi:SystemName">
+            <AttributeValue>XDS Code Camp Sample Code</AttributeValue>
+          </Attribute>
+          <Attribute Name="nsi:SystemVersion">
+            <AttributeValue>0.1</AttributeValue>
+          </Attribute>
+          <Attribute Name="nsi:OrgResponsibleName">
+            <AttributeValue>lakeside.dk</AttributeValue>
+          </Attribute>
+          <Attribute Name="nsi:CitizenUserRelation">
+            <AttributeValue>nsi:Citizen</AttributeValue>
+          </Attribute>
+        </AttributeStatement>
+      </Assertion>
+    </HsuidHeader>
+  </soap:Header>
+  <soap:Body>
+    <AdhocQueryRequest xmlns="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0">
+      <ResponseOption returnComposedObjects="true" returnType="LeafClass"/>
+      <rim:AdhocQuery xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" id="urn:uuid:14d4debf-8f97-4251-9a74-a90016b0af0d">
+        <rim:Slot name="$XDSDocumentEntryPatientId">
+          <rim:ValueList>
+            <rim:Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</rim:Value>
+          </rim:ValueList>
+        </rim:Slot>
+        <rim:Slot name="$XDSDocumentEntryStatus">
+          <rim:ValueList>
+            <rim:Value>('urn:oasis:names:tc:ebxml-regrep:StatusType:Approved')</rim:Value>
+          </rim:ValueList>
+        </rim:Slot>
+        <rim:Slot name="$XDSDocumentEntryTypeCode">
+          <rim:ValueList>
+            <rim:Value>('39289-4^^2.16.840.1.113883.6.1')</rim:Value>
+          </rim:ValueList>
+        </rim:Slot>
+        <rim:Slot name="$XDSDocumentEntryServiceStartTimeFrom">
+          <rim:ValueList>
+            <rim:Value>20171231000000</rim:Value>
+          </rim:ValueList>
+        </rim:Slot>
+        <rim:Slot name="$XDSDocumentEntryServiceStopTimeTo">
+          <rim:ValueList>
+            <rim:Value>20181231000000</rim:Value>
+          </rim:ValueList>
+        </rim:Slot>
+        <rim:Slot name="$XDSDocumentEntryType">
+          <rim:ValueList>
+            <rim:Value>urn:uuid:34268e47-fdf5-41a6-ba33-82133c465248</rim:Value>
+          </rim:ValueList>
+        </rim:Slot>
+      </rim:AdhocQuery>
+    </AdhocQueryRequest>
+  </soap:Body>
+</soap:Envelope>

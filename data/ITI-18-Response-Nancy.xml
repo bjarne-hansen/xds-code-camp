@@ -1,0 +1,2512 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Header>
+      <Action xmlns="http://www.w3.org/2005/08/addressing">urn:ihe:iti:2007:RegistryStoredQueryResponse</Action>
+      <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:e6db35fe-8c3a-434b-9a8f-0dd671f8bb2e</MessageID>
+      <To xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</To>
+      <RelatesTo xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:3b290da7-5da1-4a41-838f-87f303d43f5f</RelatesTo>
+      <ns11:Header ns13:maxAge="24" xmlns:ns13="urn:dk.nsi.service" xmlns:ns12="http://www.nsi.dk/hsuid/2016/08/hsuid-1.1.xsd" xmlns:ns11="http://www.medcom.dk/dgws/2006/04/dgws-1.0.xsd" xmlns:ns10="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:ns9="http://www.w3.org/2000/09/xmldsig#" xmlns:ns8="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ns7="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns5="urn:oasis:names:tc:ebxml-regrep:xsd:cms:3.0" xmlns:ns4="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns3="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns2="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0">
+         <ns11:Linking>
+            <ns11:FlowID>a2df3cfd-7e1c-47c3-9fd5-8824c4e899fb</ns11:FlowID>
+            <ns11:MessageID>AAABav2E8/q5bX7pyr5WcVNPU0k=</ns11:MessageID>
+            <ns11:InResponseToMessageID>1acd805d-aa0b-40c5-ba6d-9746b750e406</ns11:InResponseToMessageID>
+         </ns11:Linking>
+         <ns11:FlowStatus>flow_finalized_succesfully</ns11:FlowStatus>
+      </ns11:Header>
+   </soap:Header>
+   <soap:Body>
+      <ns3:AdhocQueryResponse totalResultCount="20" status="urn:ihe:iti:2007:ResponseStatusType:PartialSuccess" xmlns="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns2="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns3="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns4="urn:oasis:names:tc:ebxml-regrep:xsd:cms:3.0" xmlns:ns5="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns6="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:ns7="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ns8="http://www.w3.org/2000/09/xmldsig#" xmlns:ns9="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:ns10="http://www.medcom.dk/dgws/2006/04/dgws-1.0.xsd" xmlns:ns11="http://www.nsi.dk/hsuid/2016/08/hsuid-1.1.xsd">
+         <ns2:RegistryErrorList highestSeverity="urn:oasis:names:tc:ebxml-regrep:ErrorSeverityType:Error">
+            <ns2:RegistryError codeContext="[Document Unique Id: null, Home Community Id: null, Repository Unique Id: null]" errorCode="dk.nsi.dds.projects.ao.documentmetadataprovider.exceptions.InvokerCallException: dk.nsi.dds.projects.ao.documentmetadataprovider.exceptions.InvokerCallException: Bookplan server returned error: Forbidden" severity="urn:oasis:names:tc:ebxml-regrep:ErrorSeverityType:Error"/>
+         </ns2:RegistryErrorList>
+         <RegistryObjectList>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20180607</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>2018083110</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStopTime">
+                  <ValueList>
+                     <Value>2018083111</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.43210.8.20.11</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>8689</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <VersionInfo versionName="1"/>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="" id="urn:uuid:1c3664df-c061-4f0b-b3ac-5a2a39f09f1a">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</Value>
+                     </ValueList>
+                  </Slot>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="001" id="urn:uuid:b6079de8-8a21-4878-9a8d-f2ad9bf9a868">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:c9783e44-fa81-442b-a710-7a2598081167">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.14.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="22232009" id="urn:uuid:552eae07-cc8c-4afa-a93e-306b0349cda5">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="408443003" id="urn:uuid:fe772f97-377b-43a5-9478-de63e82ed911">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="39289-4" id="urn:uuid:033e3218-1987-4570-a2a7-5f8e297422b9">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="N" id="urn:uuid:7505668a-de96-4df0-9c1d-8cf847f8d87c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+                  </Name>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:43a5db59-bf47-4fe9-ad87-5bcd38f4c5cd">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.patientId"/>
+                  </Name>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="8353399289394569667.5264237518200418635.1528403737836" id="urn:uuid:fe083081-c2b1-4e4c-b550-4d852a60c18f">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.uniqueId"/>
+                  </Name>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20180608</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>2018083110</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStopTime">
+                  <ValueList>
+                     <Value>2018083111</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.43210.8.20.11</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>8689</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <VersionInfo versionName="1"/>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="" id="urn:uuid:4ea2ae71-9249-4796-b8ef-a3285f82a0a1">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</Value>
+                     </ValueList>
+                  </Slot>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="001" id="urn:uuid:b2b8499e-f7f2-41df-98e1-27f0d2f4d73b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:8a3337dd-8219-4dd4-b5a2-e86166940b70">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.14.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="22232009" id="urn:uuid:a0e57848-74a4-452e-a46b-a09705d62735">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="408443003" id="urn:uuid:787e7195-f375-4c15-b583-88a4c0f9d03e">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="39289-4" id="urn:uuid:374a1168-4783-46c8-a021-e77758185869">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="N" id="urn:uuid:e5d4507a-0b78-42e7-a7e0-93a6cf163f8d">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+                  </Name>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:6e9a8799-949e-46ce-99c4-bb392da42ef2">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.patientId"/>
+                  </Name>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="4626988570895596169.1706949989627285041.1528441530671" id="urn:uuid:86d5cf9d-e459-402e-9a0a-8326d581c425">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.uniqueId"/>
+                  </Name>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20180608</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>2018083110</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStopTime">
+                  <ValueList>
+                     <Value>2018083111</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.43210.8.20.11</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>8689</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <VersionInfo versionName="1"/>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="" id="urn:uuid:100b8afd-f0bb-4037-87d3-75a61a4a91fe">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</Value>
+                     </ValueList>
+                  </Slot>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="001" id="urn:uuid:7ef979e8-f701-4eca-b7d8-88ea332111f9">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:f06198a7-db3a-4895-8ce2-58bde2f6ce00">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.14.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="22232009" id="urn:uuid:d0e45563-ba07-45cf-a026-a3a2f5f7c9b6">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="408443003" id="urn:uuid:142c0f39-1e17-4a69-ae86-aaedb5f4a3a7">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="39289-4" id="urn:uuid:cbffb0f7-04cd-4315-a740-a0929081058c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="N" id="urn:uuid:aefd3a11-d8e4-4068-a090-8a47e2399ee6">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+                  </Name>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:5bc93643-cc6a-4ecd-8cd0-245f2b03b477">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.patientId"/>
+                  </Name>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="5523082927262896132.7637819819704039980.1528441636358" id="urn:uuid:39558578-355c-4717-879c-936aeb6db8d8">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.uniqueId"/>
+                  </Name>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20180608</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>2018083110</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStopTime">
+                  <ValueList>
+                     <Value>2018083111</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.43210.8.20.11</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>8689</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <VersionInfo versionName="1"/>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="" id="urn:uuid:bafe98ef-5852-429f-a320-237195735a16">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</Value>
+                     </ValueList>
+                  </Slot>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="001" id="urn:uuid:dcba5bbb-6331-42ab-a295-32373858fcb1">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:b91cb89d-3db0-480e-8be2-0a903765035c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.14.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="22232009" id="urn:uuid:fcdc4577-3337-4c3f-bd87-30da91f016cf">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="408443003" id="urn:uuid:a263a76f-9397-4518-bbfe-e8ff11c90392">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="39289-4" id="urn:uuid:8782a728-05d7-4008-afed-10d138f8f79c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="N" id="urn:uuid:0c56ceec-e5ac-431a-a92c-c7694fa04729">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+                  </Name>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:7ff3116c-de04-4d40-a32b-267b1e87337e">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.patientId"/>
+                  </Name>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="8156839756873897955.4681265086021715270.1528441781325" id="urn:uuid:ce62405f-4dda-4a0b-b433-d383cfb43082">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.uniqueId"/>
+                  </Name>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20180608</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>2018083110</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStopTime">
+                  <ValueList>
+                     <Value>2018083111</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.43210.8.20.11</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>8689</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <VersionInfo versionName="1"/>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="" id="urn:uuid:6e9e99de-23ca-4eb2-86e2-b23a55006ea4">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</Value>
+                     </ValueList>
+                  </Slot>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="001" id="urn:uuid:b2c45c8d-748c-4ddd-8cc9-57d99047ce76">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:ef7337bc-95ba-44eb-8dfc-74696f91d528">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.14.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="22232009" id="urn:uuid:8f4ab570-0d82-4f97-a60b-0eea8978165a">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="408443003" id="urn:uuid:bf3c2239-bb79-4f15-92dc-acb7246da1a5">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="39289-4" id="urn:uuid:d759c194-6a58-431c-9979-897c61fd1efb">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="N" id="urn:uuid:985f1ff1-f968-4f9d-bb58-e66881011b7e">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+                  </Name>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:51f5f2be-fcf2-4dda-a06b-117b58c01f61">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.patientId"/>
+                  </Name>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="6946778998876148702.7192223840203720416.1528441845022" id="urn:uuid:b1464694-9bdd-41c7-8a75-55eb3afcbc1e">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.uniqueId"/>
+                  </Name>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20180608</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>2018083110</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStopTime">
+                  <ValueList>
+                     <Value>2018083111</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.43210.8.20.11</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>8689</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <VersionInfo versionName="1"/>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="" id="urn:uuid:a24d0c41-1f95-4900-a1f8-4862b25d1482">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</Value>
+                     </ValueList>
+                  </Slot>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="001" id="urn:uuid:eff10940-d55b-4293-be94-d507e1a2943d">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:ca85d236-fb33-4c5e-92cc-b1a28e004a86">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.14.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="22232009" id="urn:uuid:8a97b62c-0690-478a-958a-adcde30a2591">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="408443003" id="urn:uuid:171a9ff6-eda9-4f91-91f1-7dc28a02a032">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="39289-4" id="urn:uuid:37611eec-593f-4e09-99a5-d0d2acd08f9f">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="N" id="urn:uuid:43bb4be7-d6dc-4b06-8c30-f3f7ea945dd4">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+                  </Name>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:2af6bde9-58ec-47df-8ee1-763c4ece16a0">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.patientId"/>
+                  </Name>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="8241023923858306665.2909392642254455372.1528441897046" id="urn:uuid:25b67e09-4e36-4fbc-9753-1be8a979048a">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.uniqueId"/>
+                  </Name>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20180608</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>2018083110</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStopTime">
+                  <ValueList>
+                     <Value>2018083111</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.43210.8.20.11</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>8689</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <VersionInfo versionName="1"/>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="" id="urn:uuid:700ca6f7-02aa-4fee-a8e8-1e9786e6f34d">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</Value>
+                     </ValueList>
+                  </Slot>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="001" id="urn:uuid:2ec29b01-1c3d-48c6-b77e-3b70013f0603">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:239a98fb-e57b-4121-aeb5-6d360584e1e0">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.14.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="22232009" id="urn:uuid:50a061d8-6b37-47e4-8f1a-913d40652c15">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="408443003" id="urn:uuid:ddb4241e-e858-40f6-8bab-3aa5dd332db6">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="39289-4" id="urn:uuid:2270047d-e960-4c0c-9a9b-8cb08f43f036">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="N" id="urn:uuid:bcc4d706-f31c-4f62-88d7-782ba37b931d">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+                  </Name>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:d6e74ce3-6051-4c29-ba51-6b35f7a3a3fe">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.patientId"/>
+                  </Name>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="6634676823462847268.3083749230312667870.1528442207384" id="urn:uuid:ddefb889-bb07-4852-a16d-2f3ab7f9f737">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.uniqueId"/>
+                  </Name>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="application/octet-stream" lid="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" home="urn:oid:1.2.208.176.43210.8.20.11">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>201812102104</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>201812102104</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStopTime">
+                  <ValueList>
+                     <Value>201812102104</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.43210.8.20.11</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>6291</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString xml:lang="en-US" charset="UTF-8" value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1"/>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="" id="urn:uuid:8589477f-1add-4ee4-979d-c0c202c28fcd">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Læge Hans Andersen^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^12345678901234</Value>
+                     </ValueList>
+                  </Slot>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="001" id="urn:uuid:9654c579-9922-4395-a69e-414f485d62c3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" id="urn:uuid:62bc1c2f-36e3-42d5-9ff9-01f8e6bd41a0">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.184.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="DK Appointment Summary Document schema"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="394761003" id="urn:uuid:437c4000-ca3d-434b-8219-f33e613b55fb">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="almen lægepraksis"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="408443003" id="urn:uuid:d3109605-4f17-484a-b40b-c0b2fdd53ab9">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.96</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="39289-4" id="urn:uuid:553e9e48-649d-4ce9-9aec-f2f5e2fafd32">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="2.16.840.1.113883.5.25" id="urn:uuid:8b87f1e4-c898-462d-89e8-52d81c98abb2">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+                  </Name>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:563d78d4-7168-4fd2-a82a-f9008fcd26ae">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.patientId"/>
+                  </Name>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.184^0762074171766375104.2674916774698055898.7649316548312" id="urn:uuid:806f49e0-0c1d-4f35-a401-48e6bb6a9272">
+                  <Name>
+                     <LocalizedString value="XDSDocumentEntry.uniqueId"/>
+                  </Name>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="4719f819-2d04-4798-869f-d31d2e7c8fb1" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181115131500</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>debad31b3c283cdc71fa7257834dcb2447bc4b8d</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181115131500</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^4719f819-2d04-4798-869f-d31d2e7c8fb1" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="94f4b014-0611-4d78-afda-27c77d8476ff" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181126060000</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>01606150c8c5197dcd68b192a293f205974c3217</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181126060000</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^94f4b014-0611-4d78-afda-27c77d8476ff" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="1069d176-231f-4704-bd46-1bc2be05aff3" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181127095500</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>73e314fbac7dc47b086b30707efb70d0cbaee497</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181127095500</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^1069d176-231f-4704-bd46-1bc2be05aff3" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="684186ba-fa9f-4f01-8749-19fbc0c15517" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181127121500</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>3931e4c73ba571020b73c815678606e34f1e9fdf</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181127121500</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^684186ba-fa9f-4f01-8749-19fbc0c15517" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="c5c878cf-0300-4784-a0c8-f31366017c45" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181129080000</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>b30682698ad63393fc6d687d320857569c51e485</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181129080000</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^c5c878cf-0300-4784-a0c8-f31366017c45" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="76ce8a05-ead5-4b27-9250-8285c519569d" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181130081500</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>1987a6f057dfbc252e4c33ab2df2198370873354</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181130081500</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^76ce8a05-ead5-4b27-9250-8285c519569d" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="b5b2c4db-8aad-4f65-8f48-a774610f8ed0" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181206170400</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>8c06603ac040fd4b633b57145b325f0626224b98</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181206170400</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^b5b2c4db-8aad-4f65-8f48-a774610f8ed0" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="c5013b1f-1d5f-4f33-a28a-bfa13a03adbf" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181207081500</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>7574f67f107e36d414e903482a5783014bf49431</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181207081500</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^c5013b1f-1d5f-4f33-a28a-bfa13a03adbf" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="78e14a1a-1b50-4359-9fbb-2648c094937e" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181207091500</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>d03ca66cc3e1b74b153450250616dacdb587bd32</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181207091500</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^78e14a1a-1b50-4359-9fbb-2648c094937e" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="11e468df-5b40-4f98-8cdd-833be303e80b" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181207101500</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>5be3dff58e3d5ccedd389f26537562d455979929</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181207101500</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^11e468df-5b40-4f98-8cdd-833be303e80b" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="58457f64-f4bf-4d4c-8b98-7b2e4b2e41b0" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181212091000</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>bdfec361d0f70dff2bca1ffa52abc2b20b5b7b72</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181212091000</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^58457f64-f4bf-4d4c-8b98-7b2e4b2e41b0" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+            <ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="b0f48824-d158-4b6f-921f-11879395f178" home="1.2.208.176.99.179.99.98">
+               <Slot name="creationTime">
+                  <ValueList>
+                     <Value>20181218081500</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="languageCode">
+                  <ValueList>
+                     <Value>da-DK</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="sourcePatientId">
+                  <ValueList>
+                     <Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="hash">
+                  <ValueList>
+                     <Value>ddb898d3c24ac02c7fa66655bffa87140fe9ae7b</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="size">
+                  <ValueList>
+                     <Value>0</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="repositoryUniqueId">
+                  <ValueList>
+                     <Value>1.2.208.176.99.179.99.98.1</Value>
+                  </ValueList>
+               </Slot>
+               <Slot name="serviceStartTime">
+                  <ValueList>
+                     <Value>20181218081500</Value>
+                  </ValueList>
+               </Slot>
+               <Name>
+                  <LocalizedString value="Aftale for 2512489996"/>
+               </Name>
+               <VersionInfo versionName="1.1"/>
+               <Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="001" lid="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64" id="urn:uuid:3f19f4b7-07b4-43b1-88c1-d99e7ba96c64">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.9</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Klinisk rapport"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" lid="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3" id="urn:uuid:e9fff511-a673-4f26-83f8-9a7fab4dc0e3">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.3.4208.100.10</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="DK Appointment Summary Document schema"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="22232009" lid="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26" id="urn:uuid:b4b6c829-ae06-4a52-b20d-b7c46d545e26">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>1.2.208.176.1.1.2</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="hospital"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="Unknown" lid="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b" id="urn:uuid:da8881e0-628f-4b0e-bff4-a4e2ac0a095b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.11.10612</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Unknown"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="39289-4" lid="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b" id="urn:uuid:9444238a-6539-4a90-9de8-0f7ef8b55e2b">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.6.1</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Dato og tidspunkt for møde mellem patient og sundhedsperson"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="N" lid="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c" id="urn:uuid:472e3f0d-14f0-4ca5-8f4d-d249b6cc066c">
+                  <Slot name="codingScheme">
+                     <ValueList>
+                        <Value>2.16.840.1.113883.5.25</Value>
+                     </ValueList>
+                  </Slot>
+                  <Name>
+                     <LocalizedString value="Normal"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" nodeRepresentation="empty" lid="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567" id="urn:uuid:ef8cf734-31b9-4ac5-8ad1-c09344ade567">
+                  <Slot name="authorInstitution">
+                     <ValueList>
+                        <Value>Region Nordjylland^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^6071000016008</Value>
+                     </ValueList>
+                  </Slot>
+                  <VersionInfo versionName="1.1"/>
+               </Classification>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" lid="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9" id="urn:uuid:95f88d7e-0440-4ebe-8e89-d521f8d09de9">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.patientId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+               <ExternalIdentifier registryObject="urn:uuid:f69ea987-4d7f-41c4-ae19-616a84901806" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.176.99.179.99.98.1.1^b0f48824-d158-4b6f-921f-11879395f178" lid="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8" id="urn:uuid:e291cc5f-8364-4b45-81b4-348b576f54b8">
+                  <Name>
+                     <LocalizedString value="DocumentEntry.uniqueId"/>
+                  </Name>
+                  <VersionInfo versionName="1.1"/>
+               </ExternalIdentifier>
+            </ExtrinsicObject>
+         </RegistryObjectList>
+      </ns3:AdhocQueryResponse>
+   </soap:Body>
+</soap:Envelope>

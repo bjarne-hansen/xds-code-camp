@@ -1,0 +1,981 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Header>
+    <ns11:Header xmlns:ns13="urn:dk.nsi.service" xmlns:ns12="http://www.nsi.dk/hsuid/2016/08/hsuid-1.1.xsd" xmlns:ns11="http://www.medcom.dk/dgws/2006/04/dgws-1.0.xsd" xmlns:ns10="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:ns9="http://www.w3.org/2000/09/xmldsig#" xmlns:ns8="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ns7="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns5="urn:oasis:names:tc:ebxml-regrep:xsd:cms:3.0" xmlns:ns4="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns3="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns2="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" ns13:maxAge="24">
+      <ns11:Linking>
+        <ns11:FlowID>urn:uuid:66645453-c450-44ad-9c63-92f06b6e438d</ns11:FlowID>
+        <ns11:MessageID>AAABa0/16ZE4hv6QRkOvlFNPU0k=</ns11:MessageID>
+        <ns11:InResponseToMessageID>04373c54-46b8-43d5-a3b4-46da9c3d6d76</ns11:InResponseToMessageID>
+      </ns11:Linking>
+      <ns11:FlowStatus>flow_finalized_succesfully</ns11:FlowStatus>
+    </ns11:Header>
+  </soap:Header>
+  <soap:Body>
+    <ns4:AdhocQueryResponse xmlns:ns12="http://www.nsi.dk/hsuid/2016/08/hsuid-1.1.xsd" xmlns:ns11="http://www.medcom.dk/dgws/2006/04/dgws-1.0.xsd" xmlns:ns10="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:ns9="http://www.w3.org/2000/09/xmldsig#" xmlns:ns8="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ns7="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns5="urn:oasis:names:tc:ebxml-regrep:xsd:cms:3.0" xmlns:ns4="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns3="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns2="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" totalResultCount="8" status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success">
+      <ns2:RegistryObjectList>
+        <ns2:ExtrinsicObject mimeType="text/xml" lid="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067">
+          <ns2:Slot name="creationTime">
+            <ns2:ValueList>
+              <ns2:Value>20180607</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="hash">
+            <ns2:ValueList>
+              <ns2:Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="languageCode">
+            <ns2:ValueList>
+              <ns2:Value>da-DK</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStartTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083110</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStopTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083111</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="repositoryUniqueId">
+            <ns2:ValueList>
+              <ns2:Value>1.2.208.176.43210.8.20.11</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="size">
+            <ns2:ValueList>
+              <ns2:Value>8689</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="sourcePatientId">
+            <ns2:ValueList>
+              <ns2:Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:VersionInfo versionName="1"/>
+          <ns2:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="" id="urn:uuid:e08ce6a9-86b6-40ea-9a4e-4c39273d35fa">
+            <ns2:Slot name="authorInstitution">
+              <ns2:ValueList>
+                <ns2:Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="001" id="urn:uuid:926dd0ee-34f6-495f-80d8-b59a54975807">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.100.9</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:a33c00bf-0f84-41e9-84b3-9754d7bd37ce">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.14.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="22232009" id="urn:uuid:18789ae3-3ba4-4aa0-be83-57a5f962d364">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="408443003" id="urn:uuid:819bc0eb-3bc4-4e89-9c49-0cbc52d09555">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="39289-4" id="urn:uuid:77d92ff6-12bf-4a22-b335-eab9ffd84ef8">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for m&#248;de mellem patient og sundhedsperson"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" nodeRepresentation="N" id="urn:uuid:3d069c05-3015-4370-b4f2-e0970ed4c2fc">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.5.25</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:e5a285dd-55c6-475e-8054-25a249297ff5">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:f39c1380-4d8f-4e27-9376-398b39791067" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="8353399289394569667.5264237518200418635.1528403737836" id="urn:uuid:ab7fd40e-3a0f-4b4c-bae0-19d81ca25419">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+        </ns2:ExtrinsicObject>
+        <ns2:ExtrinsicObject mimeType="text/xml" lid="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c">
+          <ns2:Slot name="creationTime">
+            <ns2:ValueList>
+              <ns2:Value>20180608</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="hash">
+            <ns2:ValueList>
+              <ns2:Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="languageCode">
+            <ns2:ValueList>
+              <ns2:Value>da-DK</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStartTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083110</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStopTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083111</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="repositoryUniqueId">
+            <ns2:ValueList>
+              <ns2:Value>1.2.208.176.43210.8.20.11</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="size">
+            <ns2:ValueList>
+              <ns2:Value>8689</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="sourcePatientId">
+            <ns2:ValueList>
+              <ns2:Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:VersionInfo versionName="1"/>
+          <ns2:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="" id="urn:uuid:8693c7e6-511e-41b8-845f-c0030d8a252b">
+            <ns2:Slot name="authorInstitution">
+              <ns2:ValueList>
+                <ns2:Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="001" id="urn:uuid:43bedb45-b44f-4bc9-9708-c9cf15bb429d">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.100.9</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:aae88a61-9036-41ed-a1d2-99ad036f9ec1">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.14.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="22232009" id="urn:uuid:a98c09cb-54cd-4c41-94dd-0471c5d30346">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="408443003" id="urn:uuid:1fa2330d-aec9-4f67-8833-a5196b8985c7">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="39289-4" id="urn:uuid:c5d54273-69a3-41ed-8609-0fecb73d7d8c">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for m&#248;de mellem patient og sundhedsperson"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" nodeRepresentation="N" id="urn:uuid:d6fe2340-a8d1-4506-a030-b779c4df4333">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.5.25</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:704b8196-496c-4f20-936b-2c8b7a4f9905">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:72c193ba-5d30-4ebe-b325-5058cc314b6c" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="4626988570895596169.1706949989627285041.1528441530671" id="urn:uuid:488553f6-798c-45d6-85b4-bad2b7ca4f11">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+        </ns2:ExtrinsicObject>
+        <ns2:ExtrinsicObject mimeType="text/xml" lid="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec">
+          <ns2:Slot name="creationTime">
+            <ns2:ValueList>
+              <ns2:Value>20180608</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="hash">
+            <ns2:ValueList>
+              <ns2:Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="languageCode">
+            <ns2:ValueList>
+              <ns2:Value>da-DK</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStartTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083110</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStopTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083111</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="repositoryUniqueId">
+            <ns2:ValueList>
+              <ns2:Value>1.2.208.176.43210.8.20.11</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="size">
+            <ns2:ValueList>
+              <ns2:Value>8689</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="sourcePatientId">
+            <ns2:ValueList>
+              <ns2:Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:VersionInfo versionName="1"/>
+          <ns2:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="" id="urn:uuid:b7502a6a-bacd-4f70-bb37-7eaece091b3d">
+            <ns2:Slot name="authorInstitution">
+              <ns2:ValueList>
+                <ns2:Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="001" id="urn:uuid:5789707f-905e-4206-9724-c9861346bf15">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.100.9</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:1d329eba-e6d0-4e15-b8d7-59b365b4a058">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.14.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="22232009" id="urn:uuid:5e9d75c3-6166-41e2-a66b-9da5dc352f05">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="408443003" id="urn:uuid:8b65a454-6cdf-444f-8194-49bbe356c17d">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="39289-4" id="urn:uuid:6fbcad1c-9f67-4b77-a215-bb521e68a711">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for m&#248;de mellem patient og sundhedsperson"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" nodeRepresentation="N" id="urn:uuid:9fea95de-cbc0-40ef-91e4-de4c7c4d731f">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.5.25</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:bebe687b-ace8-40be-964d-99404a70c1d5">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:28089b68-7c42-4cf1-a3f9-cd75176a8dec" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="5523082927262896132.7637819819704039980.1528441636358" id="urn:uuid:26b514a6-154d-425a-9a45-143b732c72c3">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+        </ns2:ExtrinsicObject>
+        <ns2:ExtrinsicObject mimeType="text/xml" lid="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e">
+          <ns2:Slot name="creationTime">
+            <ns2:ValueList>
+              <ns2:Value>20180608</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="hash">
+            <ns2:ValueList>
+              <ns2:Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="languageCode">
+            <ns2:ValueList>
+              <ns2:Value>da-DK</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStartTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083110</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStopTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083111</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="repositoryUniqueId">
+            <ns2:ValueList>
+              <ns2:Value>1.2.208.176.43210.8.20.11</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="size">
+            <ns2:ValueList>
+              <ns2:Value>8689</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="sourcePatientId">
+            <ns2:ValueList>
+              <ns2:Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:VersionInfo versionName="1"/>
+          <ns2:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="" id="urn:uuid:9f418602-8223-445f-9ea5-479a46ffb048">
+            <ns2:Slot name="authorInstitution">
+              <ns2:ValueList>
+                <ns2:Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="001" id="urn:uuid:99bfbe70-f29f-42e9-8a12-b9988d8aa99e">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.100.9</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:17282e22-a35e-429a-9451-e0cb660abc9c">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.14.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="22232009" id="urn:uuid:f8bbb81f-880b-42a6-abf2-f83ca1b91f37">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="408443003" id="urn:uuid:cd68474e-d090-4b00-912a-de8757fe13b8">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="39289-4" id="urn:uuid:4259b7a1-e92c-4746-9fa2-09c00ccea785">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for m&#248;de mellem patient og sundhedsperson"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" nodeRepresentation="N" id="urn:uuid:f37acc00-344d-435c-bd36-1f9b96fff2db">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.5.25</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:69eb2a31-5dfe-4c92-ab48-4f138ca32b6e">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:8d0c1d2a-68dd-4db8-aae3-4455a1e6377e" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="8156839756873897955.4681265086021715270.1528441781325" id="urn:uuid:e798f256-156a-4d27-b2ae-d3f3b9341364">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+        </ns2:ExtrinsicObject>
+        <ns2:ExtrinsicObject mimeType="text/xml" lid="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e">
+          <ns2:Slot name="creationTime">
+            <ns2:ValueList>
+              <ns2:Value>20180608</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="hash">
+            <ns2:ValueList>
+              <ns2:Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="languageCode">
+            <ns2:ValueList>
+              <ns2:Value>da-DK</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStartTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083110</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStopTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083111</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="repositoryUniqueId">
+            <ns2:ValueList>
+              <ns2:Value>1.2.208.176.43210.8.20.11</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="size">
+            <ns2:ValueList>
+              <ns2:Value>8689</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="sourcePatientId">
+            <ns2:ValueList>
+              <ns2:Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:VersionInfo versionName="1"/>
+          <ns2:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="" id="urn:uuid:d3131db1-a697-4310-87ec-2c56b3c159e2">
+            <ns2:Slot name="authorInstitution">
+              <ns2:ValueList>
+                <ns2:Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="001" id="urn:uuid:a04b017a-7ea3-4977-9a4f-7ceed7318ca5">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.100.9</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:fddd018b-b17a-4c89-838c-417c459e67a7">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.14.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="22232009" id="urn:uuid:5721b504-c70b-42ab-bd4a-5cc9c685576a">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="408443003" id="urn:uuid:517bba13-0529-47c3-8934-3ada35ddc52f">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="39289-4" id="urn:uuid:1dc146a3-ec7e-46b0-b083-927946f90322">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for m&#248;de mellem patient og sundhedsperson"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" nodeRepresentation="N" id="urn:uuid:d20ae8a4-5cda-459f-adc4-494c85a3c8fc">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.5.25</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:5491c0ac-685d-4639-b899-81445d076238">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:58a61e5e-7379-4283-a74e-3ae643f19a5e" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="6946778998876148702.7192223840203720416.1528441845022" id="urn:uuid:c47ac597-c90b-485a-87bf-8258d23b253e">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+        </ns2:ExtrinsicObject>
+        <ns2:ExtrinsicObject mimeType="text/xml" lid="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003">
+          <ns2:Slot name="creationTime">
+            <ns2:ValueList>
+              <ns2:Value>20180608</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="hash">
+            <ns2:ValueList>
+              <ns2:Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="languageCode">
+            <ns2:ValueList>
+              <ns2:Value>da-DK</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStartTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083110</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStopTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083111</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="repositoryUniqueId">
+            <ns2:ValueList>
+              <ns2:Value>1.2.208.176.43210.8.20.11</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="size">
+            <ns2:ValueList>
+              <ns2:Value>8689</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="sourcePatientId">
+            <ns2:ValueList>
+              <ns2:Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:VersionInfo versionName="1"/>
+          <ns2:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="" id="urn:uuid:65dab4e9-e010-4a9c-bdc0-1fd8c4243538">
+            <ns2:Slot name="authorInstitution">
+              <ns2:ValueList>
+                <ns2:Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="001" id="urn:uuid:ecde4371-ca34-43ea-88c0-9af3b95fbd55">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.100.9</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:c0268f22-d719-4945-9cc4-c957e2414157">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.14.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="22232009" id="urn:uuid:5e08557c-fffa-49c7-9714-f1dda523d72f">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="408443003" id="urn:uuid:334d3c6b-db9b-4fc4-a5f2-3fa10e4a4ffe">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="39289-4" id="urn:uuid:9f463c1c-1eb7-470a-8a62-890dc72a9771">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for m&#248;de mellem patient og sundhedsperson"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" nodeRepresentation="N" id="urn:uuid:23a020ec-5839-4c23-8ce5-8808c39a1d77">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.5.25</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:3845c1a0-6495-40af-871b-ba0332aeb9c0">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:4dedbba3-d4ed-4880-9c57-e293ade46003" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="8241023923858306665.2909392642254455372.1528441897046" id="urn:uuid:382cfec6-77f7-4953-9af7-a876bdffdd5b">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+        </ns2:ExtrinsicObject>
+        <ns2:ExtrinsicObject mimeType="text/xml" lid="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d">
+          <ns2:Slot name="creationTime">
+            <ns2:ValueList>
+              <ns2:Value>20180608</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="hash">
+            <ns2:ValueList>
+              <ns2:Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="languageCode">
+            <ns2:ValueList>
+              <ns2:Value>da-DK</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStartTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083110</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStopTime">
+            <ns2:ValueList>
+              <ns2:Value>2018083111</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="repositoryUniqueId">
+            <ns2:ValueList>
+              <ns2:Value>1.2.208.176.43210.8.20.11</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="size">
+            <ns2:ValueList>
+              <ns2:Value>8689</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="sourcePatientId">
+            <ns2:ValueList>
+              <ns2:Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:VersionInfo versionName="1"/>
+          <ns2:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="" id="urn:uuid:c4bafc8d-dc92-4075-9004-ce85062960b7">
+            <ns2:Slot name="authorInstitution">
+              <ns2:ValueList>
+                <ns2:Value>OUH Radiologisk Afdeling (Svendborg)^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^242621000016001</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="001" id="urn:uuid:afab167c-0e02-4050-80b7-d04e41e968ea">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.100.9</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="urn:ad:dk:medcom:appointment" id="urn:uuid:5b4f2b63-9b62-444a-af1d-655b0fa82613">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.14.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="DK CDA APD"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="22232009" id="urn:uuid:25f354d2-b904-4586-9162-228fe14b1378">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="hospital"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="408443003" id="urn:uuid:6ef8abed-5d8a-4095-8d8c-783f6f1eb471">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="39289-4" id="urn:uuid:721e60b8-0997-41f9-8ec1-74d46926d616">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for m&#248;de mellem patient og sundhedsperson"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" nodeRepresentation="N" id="urn:uuid:55846473-027e-4cce-b5c7-d903dddbdaf8">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.5.25</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:9eec6b24-2032-4771-b49e-98175e14e0f8">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:13bd7d33-5b70-45e9-8dd8-3d214735876d" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="6634676823462847268.3083749230312667870.1528442207384" id="urn:uuid:9ecd4f6d-c25f-4b8a-9432-d01a9046bee0">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+        </ns2:ExtrinsicObject>
+        <ns2:ExtrinsicObject mimeType="application/octet-stream" lid="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved" id="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" home="urn:oid:1.2.208.176.43210.8.20.11">
+          <ns2:Slot name="creationTime">
+            <ns2:ValueList>
+              <ns2:Value>201812102104</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="hash">
+            <ns2:ValueList>
+              <ns2:Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="languageCode">
+            <ns2:ValueList>
+              <ns2:Value>da-DK</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStartTime">
+            <ns2:ValueList>
+              <ns2:Value>201812102104</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="serviceStopTime">
+            <ns2:ValueList>
+              <ns2:Value>201812102104</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="repositoryUniqueId">
+            <ns2:ValueList>
+              <ns2:Value>1.2.208.176.43210.8.20.11</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="size">
+            <ns2:ValueList>
+              <ns2:Value>6291</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Slot name="sourcePatientId">
+            <ns2:ValueList>
+              <ns2:Value>2512489996^^^&amp;1.2.208.176.1.2&amp;ISO</ns2:Value>
+            </ns2:ValueList>
+          </ns2:Slot>
+          <ns2:Name>
+            <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Aftale for 2512489996"/>
+          </ns2:Name>
+          <ns2:VersionInfo versionName="1"/>
+          <ns2:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="" id="urn:uuid:0fcb9fd5-cb43-4bf2-ba87-c0b4d48596c3">
+            <ns2:Slot name="authorInstitution">
+              <ns2:ValueList>
+                <ns2:Value>L&#230;ge Hans Andersen^^^^^&amp;1.2.208.176.1.1&amp;ISO^^^^12345678901234</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="001" id="urn:uuid:a1ff0ec1-f566-4b6c-947e-88f3516970e7">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.100.9</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Klinisk rapport"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="urn:ad:dk:medcom:appointmentsummary:full" id="urn:uuid:f0ca9595-5506-42e9-bb58-da9d1b47a7df">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>1.2.208.184.100.10</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="DK Appointment Summary Document schema"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="394761003" id="urn:uuid:a17b2e95-38f7-42a3-be3f-c02562bf14da">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="almen l&#230;gepraksis"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="408443003" id="urn:uuid:b4fcf9f9-677d-473b-b74d-3534bcef67f6">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.96</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="almen medicin"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="39289-4" id="urn:uuid:fc7c9445-81d4-4a36-96c2-47a58fe67d0f">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>2.16.840.1.113883.6.1</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Dato og tidspunkt for m&#248;de mellem patient og sundhedsperson"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" nodeRepresentation="2.16.840.1.113883.5.25" id="urn:uuid:2a5b5ca0-5551-48e9-90c6-633719d4425f">
+            <ns2:Slot name="codingScheme">
+              <ns2:ValueList>
+                <ns2:Value>urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f</ns2:Value>
+              </ns2:ValueList>
+            </ns2:Slot>
+            <ns2:Name>
+              <ns2:LocalizedString xml:lang="en-US" charset="UTF-8" value="Normal"/>
+            </ns2:Name>
+          </ns2:Classification>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="2512489996^^^&amp;1.2.208.176.1.2&amp;ISO" id="urn:uuid:2d921e35-8f85-4290-b3fd-9b1dabfc7382">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.patientId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+          <ns2:ExternalIdentifier registryObject="urn:uuid:e51df413-dc8f-4462-9f14-84d0b0b14aaf" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="1.2.208.184^0762074171766375104.2674916774698055898.7649316548312" id="urn:uuid:555cc4af-1868-4efd-96d0-45b93f016482">
+            <ns2:Name>
+              <ns2:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+            </ns2:Name>
+          </ns2:ExternalIdentifier>
+        </ns2:ExtrinsicObject>
+      </ns2:RegistryObjectList>
+    </ns4:AdhocQueryResponse>
+  </soap:Body>
+</soap:Envelope>
