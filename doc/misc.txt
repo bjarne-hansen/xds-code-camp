@@ -1,5 +1,16 @@
 
 
+* Presentation:
+    http://oid-info.com/get/1.2.208.184 etc
+    http://oidref.com/1.2.208.184
+
+Gazelle: https://gazelle.ihe.net/
+XDStarClient: https://gazelle.ihe.net/XDStarClient/home.seam
+
+
+
+
+
 Structure
 ---------
 soap:Envelope

@@ -2,7 +2,8 @@
 # Import of library packages.
 from lxml import etree as xml
 from datetime import datetime
-from uuid import UUID
+from uuid import uuid4, UUID
+import io
 
 # Import of own model package.
 from xds.model import *
@@ -21,6 +22,9 @@ prefix_lcm = "lcm"
 
 uri_xdsb = "urn:ihe:iti:xds-b:2007"
 prefix_xdsb = None
+
+uri_xop = "http://www.w3.org/2004/08/xop/include"
+prefix_xop = "xop"
 
 
 # Function to recursively serialize xds.model objects into a XML document (etree).
@@ -134,35 +138,65 @@ def to_xml(obj):
         #
         # RetrieveDocumentSetRequest
         #   DocumentRequest
-        #     HomeCommunityId
-        #     RepositoryUniqueId
-        #     DocumentUniqueId
+        #   ...
         #
         retrieve_document_set_request_element = \
             xml.Element(xml.QName(uri_xdsb, "RetrieveDocumentSetRequest"), nsmap={prefix_xdsb: uri_xdsb})
 
-        for document_request in obj:
-            document_request_element = \
-                xml.SubElement(retrieve_document_set_request_element, xml.QName(uri_xdsb, "DocumentRequest"))
+        for dr in obj.document_requests:
+            if isinstance(dr, DocumentRequest):
+                document_request_element = to_xml(dr)
+                retrieve_document_set_request_element.append(document_request_element)
+            else:
+                raise TypeError("RetrieveDocumentSetRequest.document_requests expected element instance of "
+                                "DocumentRequest but got {}.".format(type(dr)))
 
-            home_community_id_element = \
-                xml.SubElement(document_request_element, xml.QName(uri_xdsb, "HomeCommunityId"))
-            home_community_id_element.text = document_request["HomeCommunityId"]
-
-            repository_unique_id_element = \
-                xml.SubElement(document_request_element, xml.QName(uri_xdsb, "RepositoryUniqueId"))
-            repository_unique_id_element.text = document_request["RepositoryUniqueId"]
-
-            document_unique_id = xml.SubElement(document_request_element, xml.QName(uri_xdsb, "DocumentUniqueId"))
-            document_unique_id.text = document_request["DocumentUniqueId"]
+        # for document_request in obj.document_requests:
+        #     document_request_element = \
+        #         xml.SubElement(retrieve_document_set_request_element, xml.QName(uri_xdsb, "DocumentRequest"))
+        #
+        #     home_community_id_element = \
+        #         xml.SubElement(document_request_element, xml.QName(uri_xdsb, "HomeCommunityId"))
+        #     home_community_id_element.text = document_request["HomeCommunityId"]
+        #
+        #     repository_unique_id_element = \
+        #         xml.SubElement(document_request_element, xml.QName(uri_xdsb, "RepositoryUniqueId"))
+        #     repository_unique_id_element.text = document_request["RepositoryUniqueId"]
+        #
+        #     document_unique_id = xml.SubElement(document_request_element, xml.QName(uri_xdsb, "DocumentUniqueId"))
+        #     document_unique_id.text = document_request["DocumentUniqueId"]
 
             return retrieve_document_set_request_element
 
     elif isinstance(obj, DocumentRequest):
-        pass
+        #
+        # DocumentRequest
+        #   HomeCommunityId
+        #   RepositoryUniqueId
+        #   DocumentUniqueId
+        #
+        document_request_element = xml.Element(xml.QName(uri_xdsb, "DocumentRequest"))
+
+        child_element = xml.SubElement(document_request_element, xml.QName(uri_xdsb, "HomeCommunityId"))
+        child_element.text = obj.home_community_id
+
+        child_element = xml.SubElement(document_request_element, xml.QName(uri_xdsb, "RepositoryUniqueId"))
+        child_element.text = obj.repository_unique_id
+
+        child_element = xml.SubElement(document_request_element, xml.QName(uri_xdsb, "DocumentUniqueId"))
+        child_element.text = obj.document_unique_id
+
+        return document_request_element
 
     elif isinstance(obj, ProvideAndRegisterDocumentSetRequest):
-
+        #
+        # ProvideAndRegiterDocumentSetRequest
+        #   SubmitObjectRequest
+        #     ...
+        #  Document
+        #    ...
+        #  ...
+        #
         prdsr = xml.Element(xml.QName(uri_xdsb, "ProvideAndRegisterDocumentSetRequest"),
                             nsmap={prefix_xdsb: uri_xdsb, prefix_lcm: uri_lcm, prefix_rim: uri_rim})
 
@@ -174,7 +208,31 @@ def to_xml(obj):
                 raise TypeError("ProvideAndRegisterDocumentSet.submit_object_request expected instance of "
                                 "SubmitObjectsRequest but got {}.".format(type(obj.submit_object_request)))
 
+        for d in obj.documents:
+            if isinstance(d, Document):
+                document_element = to_xml(d)
+                prdsr.append(document_element)
+            else:
+                raise TypeError("ProvideAndRegisterDocumentSet.documents expected element instance of "
+                                "Document but got {}.".format(type(d)))
+
         return prdsr
+
+    elif isinstance(obj, Document):
+        #
+        # Document
+        #   Include @href
+        #
+
+        attrs = dict()
+        attrs["id"] = obj.document_id
+        document_element = xml.Element(xml.QName(uri_xdsb, "Document"), attrib=attrs)
+
+        attrs = dict()
+        attrs["href"] = obj.cid
+        xml.SubElement(document_element, xml.QName(uri_xop, "Include"), attrib=attrs, nsmap={prefix_xop: uri_xop})
+
+        return document_element
 
     elif isinstance(obj, SubmitObjectsRequest):
 
