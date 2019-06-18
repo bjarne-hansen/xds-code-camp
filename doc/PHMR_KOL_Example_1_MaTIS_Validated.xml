@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../Stylesheet/cda.xsl"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="urn:hl7-org:v3 ../../../Desktop/drafts/Standarder/HL7/PHMR/Schema/CDA_SDTC.xsd"
+ xmlns="urn:hl7-org:v3" classCode="DOCCLIN" moodCode="EVN">
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+  <templateId root="2.16.840.1.113883.10.20.9"/>
+  <templateId root="1.2.208.184.11.1"/>
+  <id extension="f9562ad0-2e3f-11e6-bdf4-0800200c9a66" root="1.2.208.184" assigningAuthorityName="MedCom"/>
+  <code code="53576-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Personal Health Monitoring Report"/>
+  <title>Hjemmemonitorering for 2512489996</title>
+  <effectiveTime value="20190409145010+0200"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+  <languageCode code="da-DK"/>
+  <recordTarget typeCode="RCT" contextControlCode="OP">
+    <patientRole classCode="PAT">
+      <id extension="2512489996" root="1.2.208.176.1.2" assigningAuthorityName="CPR"/>
+      <addr use="H">
+        <streetAddressLine>Tårnhøjvej 47 </streetAddressLine>
+        <streetAddressLine>Landet</streetAddressLine>
+        <postalCode>9220</postalCode>
+        <city>Aalborg Øst</city>
+        <country>Danmark</country>
+      </addr>
+      <telecom value="tel:65123456" use="H"/>
+      <telecom value="mailto:nab@udkantsdanmark.dk" use="WP"/>
+      <patient classCode="PSN" determinerCode="INSTANCE">
+        <name>
+          <given>Nancy</given>
+          <given>Ann</given>
+          <family>Berggren</family>
+        </name>
+        <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1"/>
+        <birthTime value="19481225000000+0000"/>
+      </patient>
+    </patientRole>
+  </recordTarget>
+
+  <author typeCode="AUT" contextControlCode="OP">
+    <time value="20190409144610+0200"/>
+    <assignedAuthor classCode="ASSIGNED">
+      <!-- This is the identfication of the organization, we don't use the personal level identification-->
+      <id extension="368061000016003" root="1.2.208.176.1.1" assigningAuthorityName="SOR"/>
+      <addr use="WP">
+        <streetAddressLine>Lungemedicinsk afdeling</streetAddressLine>
+        <streetAddressLine>Mølleparkvej 4</streetAddressLine>
+        <postalCode>9000</postalCode>
+        <city>Aalborg</city>
+        <country>Danmark</country>
+      </addr>
+      <telecom value="tel:97664800" use="WP"/>
+      <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+        <name>
+          <given>Anders</given>
+          <family>Andersen</family>
+        </name>
+      </assignedPerson>
+      <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+        <id extension="368061000016003" root="1.2.208.176.1.1" assigningAuthorityName="SOR"/>
+        <name>Aalborg Universitetshospital</name>
+        <telecom nullFlavor="NI"/>
+        <addr use="WP">
+          <streetAddressLine nullFlavor="NI"/>
+        </addr>
+      </representedOrganization>
+    </assignedAuthor>
+  </author>
+  
+  <custodian typeCode="CST">
+    <assignedCustodian classCode="ASSIGNED">
+      <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+        <id extension="368061000016003" root="1.2.208.176.1.1" assigningAuthorityName="SOR"/>
+        <name>Aalborg Universitetshospital</name>
+        <telecom value="tel:97664800" use="WP"/>
+        <addr use="WP">
+          <streetAddressLine>Lungemedicinsk afdeling</streetAddressLine>
+          <streetAddressLine>Mølleparkvej 4</streetAddressLine>
+          <postalCode>9000</postalCode>
+          <city>Aalborg</city>
+          <country>Danmark</country>
+        </addr>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  
+
+  <legalAuthenticator typeCode="LA" contextControlCode="OP">
+    <time value="20190409144810+0200"/>
+    <signatureCode nullFlavor="NI"/>
+    <assignedEntity classCode="ASSIGNED">
+      <id extension="368061000016003" root="1.2.208.176.1.1" assigningAuthorityName="SOR"/>
+      <addr use="WP">
+        <streetAddressLine>Lungemedicinsk afdeling</streetAddressLine>
+        <streetAddressLine>Mølleparkvej 4</streetAddressLine>
+        <postalCode>9000</postalCode>
+        <city>Aalborg</city>
+        <country>Danmark</country>
+      </addr>
+      <assignedPerson classCode="PSN" determinerCode="INSTANCE">
+        <name>
+          <prefix>Læge</prefix>
+          <given>Lars</given>
+          <family>Olsen</family>
+        </name>
+      </assignedPerson>
+      <representedOrganization classCode="ORG" determinerCode="INSTANCE">
+        <name>Aalborg Universitetshospital</name>
+        <telecom nullFlavor="NI"/>
+        <addr use="WP">
+          <streetAddressLine nullFlavor="NI"/>
+        </addr>
+      </representedOrganization>
+    </assignedEntity>
+  </legalAuthenticator>
+
+  <documentationOf typeCode="DOC">
+    <serviceEvent classCode="MPROT" moodCode="EVN">
+      <effectiveTime>
+        <low value="20190409121010+0200"/>
+        <high value="20190409123010+0200"/>
+      </effectiveTime>
+    </serviceEvent>
+  </documentationOf>
+  
+  <documentationOf typeCode="DOC">
+    <serviceEvent classCode="MPROT" moodCode="EVN">
+      <code code="NPU03011" codeSystem="1.2.208.176.2.1" displayName="O2 sat.;Hb(aB)"/>
+    </serviceEvent>
+  </documentationOf>
+
+  <component typeCode="COMP" contextConductionInd="true">
+    <structuredBody classCode="DOCBODY" moodCode="EVN">
+      <!-- Vital Signs -->
+      <component typeCode="COMP" contextConductionInd="true">
+        <section classCode="DOCSECT" moodCode="EVN">
+          <templateId root="2.16.840.1.113883.10.20.1.16"/>
+          <templateId root="2.16.840.1.113883.10.20.9.2"/>                            
+          <templateId root="1.2.208.184.11.1"/>
+          <code code="8716-3" codeSystem="2.16.840.1.113883.6.1"/>
+          <title>Vital Signs</title>
+          <text>Vital Signs</text>
+          <!-- Saturation only -->
+          <entry typeCode="COMP" contextConductionInd="true">
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.35"/>
+              <statusCode code="Completed"/>
+              <effectiveTime value="20190409121010+0200"/>
+              <component typeCode="COMP" contextConductionInd="true">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
+                  <templateId root="2.16.840.1.113883.10.20.9.8"/>
+                  <id extension="4eea5cb0-2e67-11e6-bdf4-0800200c9a66" root="1.2.208.184" assigningAuthorityName="MedCom"/>
+                  <code nullFlavor="NI" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                    <translation code="NPU03011" codeSystem="1.2.208.176.2.1" displayName="O2 sat.;Hb(aB)" codeSystemName="NPU terminologien"/>
+                  </code>
+                  <value value="0.97" xsi:type="PQ" unit="NA"/>
+                  <methodCode code="POT" codeSystem="1.2.208.184.100.1" displayName="Målt af borger"
+                    codeSystemName="MedCom Message Codes"/>
+                  <methodCode code="AUT" codeSystem="1.2.208.184.100.1" displayName="Måling overført automatisk"
+                    codeSystemName="MedCom Message Codes"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+
+          <entry typeCode="COMP" contextConductionInd="true">
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.35"/>
+              <statusCode code="Completed"/>
+              <effectiveTime value="20190409121510+0200"/>
+              <component typeCode="COMP" contextConductionInd="true">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
+                  <templateId root="2.16.840.1.113883.10.20.9.8"/>
+                  <id extension="4eea5cb1-2e67-11e6-bdf4-0800200c9a66" root="1.2.208.184" assigningAuthorityName="MedCom"/>
+                  <code nullFlavor="NI" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                    <translation code="NPU03011" codeSystem="1.2.208.176.2.1" displayName="O2 sat.;Hb(aB)" codeSystemName="NPU terminologien"/>
+                  </code>
+                  <value value="0.92" xsi:type="PQ" unit="NA"/>
+                  <methodCode code="POT" codeSystem="1.2.208.184.100.1" displayName="Målt af borger"
+                    codeSystemName="MedCom Message Codes"/>
+                  <methodCode code="AUT" codeSystem="1.2.208.184.100.1" displayName="Måling overført automatisk"
+                    codeSystemName="MedCom Message Codes"/>
+                  <!-- Reference range defined as YELLOW low and YELLOW high -->
+                  <referenceRange>
+                    <observationRange classCode="OBS" moodCode="EVN.CRT">
+                      <templateId root="1.2.208.184.11.1.2"/>
+                      <code code="GAL" displayName="Terapeutiske grænseværdier for GUL alarm" codeSystem="1.2.208.184.100.1" codeSystemName="MedCom Message Codes"/>
+                      <value xsi:type="IVL_PQ">
+                        <low value="0.92" inclusive="true"/>
+                        <!-- Yellow low -->
+                        <high nullFlavor="NA"/>
+                        <!-- Yellow high not applicable for saturation-->
+                      </value>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          
+          <entry typeCode="COMP" contextConductionInd="true">
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.1.35"/>
+              <statusCode code="Completed"/>
+              <effectiveTime value="20190409123010+0200"/>
+              <component typeCode="COMP" contextConductionInd="true">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.1.31"/>
+                  <templateId root="2.16.840.1.113883.10.20.9.8"/>
+                  <code nullFlavor="NI" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                    <translation code="NPU03011" codeSystem="1.2.208.176.2.1" displayName="O2 sat.;Hb(aB)" codeSystemName="NPU terminologien"/>
+                  </code>
+                  <value value="0.95" xsi:type="PQ" unit="NA"/>
+                  <methodCode code="POT" codeSystem="1.2.208.184.100.1" displayName="Målt af borger"
+                    codeSystemName="MedCom Message Codes"/>
+                  <methodCode code="AUT" codeSystem="1.2.208.184.100.1" displayName="Måling overført automatisk"
+                    codeSystemName="MedCom Message Codes"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      
+      <!-- Results -->
+      <component typeCode="COMP" contextConductionInd="true">
+        <section classCode="DOCSECT" moodCode="EVN">
+          <templateId root="2.16.840.1.113883.10.20.1.14"/>
+          <templateId root="2.16.840.1.113883.10.20.9.14"/>
+          <templateId root="1.2.208.184.11.1"/>
+          <code code="30954-2" codeSystem="2.16.840.1.113883.6.1"/>
+          <title>Results</title>
+          <text>No Results section</text>
+        </section>
+      </component>
+
+      <!-- Medical Equipment -->
+      <component typeCode="COMP" contextConductionInd="true">
+        <section classCode="DOCSECT" moodCode="EVN">
+          <templateId root="2.16.840.1.113883.10.20.1.7"/>
+          <templateId root="2.16.840.1.113883.10.20.9.1"/>
+          <templateId root="1.2.208.184.11.1"/>
+          <code code="46264-8" codeSystem="2.16.840.1.113883.6.1"/>
+          <title>Medical Equipment</title>
+          <text>Medical Equipment</text>
+          <!-- COPD -->
+          <entry typeCode="COMP" contextConductionInd="true">
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.9.4"/>
+              <statusCode code="completed"/>
+              <participant typeCode="SBJ" contextControlCode="OP">
+                <participantRole classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.1.52"/>
+                  <templateId root="2.16.840.1.113883.10.20.9.9"/>
+                  <id root="1.2.208.184.100.3" extension="MCI00005" assigningAuthorityName="MedCom"/>
+                  <playingDevice classCode="DEV" determinerCode="INSTANCE">
+                    <code code="NI" codeSystem="2.16.840.1.113883.6.24" codeSystemName="MDC Dynamic">
+                      <translation code="MCI00005" codeSystem="1.2.208.184.100.3" displayName="MedCom Instrument Codes"/>
+                    </code>
+                    <manufacturerModelName>Manufacturer: Nonin / Model: Onyx II 9560 bluetooth oximeter</manufacturerModelName>
+                    <softwareName>SerialNr: N/A / SW Rev. N/A</softwareName>
+                  </playingDevice>
+                </participantRole>
+              </participant>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
