@@ -13,7 +13,7 @@ __all__ = ['Assertion', 'Subject', 'Conditions', 'Attribute', 'AttributeStatemen
 def get_assertion(response):
 
     if response is None:
-        raise ValueError("The 'name' parameter is None.")
+        raise ValueError("The 'response' parameter is None.")
 
     if isinstance(response, Response):
         response_element = xml.fromstring(response.content)

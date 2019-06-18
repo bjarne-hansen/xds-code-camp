@@ -23,10 +23,14 @@ from examples.pyseal_sts import get_sts_assertion
 
 # Get signed assertion from STS.
 assertion = get_sts_assertion()
+print("Assertion")
+print(xml.tostring(assertion))
 
 # Create WS-Security header with assertion from STS.
 security = Security()
 security.assertion = assertion
+print("Security")
+print(xml.tostring(pyseal.xml.to_xml(security)))
 
 # Create the MEDCOM header
 medcom_header = MedcomHeader(non_repudiation_receipt="no")
@@ -46,9 +50,13 @@ hsuid_header[HSUID_CITIZEN_USER_RELATION] = "nsi:Citizen"
 
 # Build RetriveDocumentSetRequest to fetch one document.
 rdsr = RetrieveDocumentSetRequest()
-rdsr.add_document_request("urn:oid:1.2.208.176.43210.8.20.11",                                  # HomeCommunityId (test2) TODO: Wrong.
-                          "1.2.208.176.43210.8.20.11",                                          # RepositoryUniqueId (test2)
-                          "1.2.208.184^0762074171766375104.2674916774698055898.7649316548312")  # DocumentUniqueId (MEDCOM)
+
+# HomeCommunityId (test2)       TODO: Tell that the value is actually not the right value.
+# RepositoryUniqueId (test2)
+# DocumentUniqueId (MEDCOM)
+rdsr.add_document_request("urn:oid:1.2.208.176.43210.8.20.11",
+                          "1.2.208.176.43210.8.20.11",
+                          "1.2.208.184^0762074171766375104.2674916774698055898.7649316548312")
 
 rdsr_element = xds.xml.to_xml(rdsr)
 
@@ -80,7 +88,8 @@ print("Execution time: %d ms." % (round((end_time - start_time) * 1000)))
 fn = "data/iti43/{}-iti43-response.xml".format(request_timestamp)
 with open(fn, "w", encoding="utf-8") as f:
     for h, v in iti43_response.headers.items():
-        f.write("{}: {}".format(h, v))
+        f.write("{}: {}\n".format(h, v))
+    f.write("\n")
     f.write(iti43_response.text)
 
 if iti43_response.status_code == 200:

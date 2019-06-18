@@ -1,7 +1,7 @@
 
 from lxml import etree as xml
 
-from pyseal.soap import Envelope
+from pyseal.soap import Envelope, Action
 from pyseal.security import Security
 from pyseal.saml import Assertion, Subject, Conditions, AttributeStatement
 from pyseal.sts import RequestSecurityToken
@@ -316,6 +316,15 @@ def to_xml(obj):
 
         return header_element
 
+    elif isinstance(obj, Action):
+
+        attrs = dict()
+        attrs[xml.QName(uri_soap, "mustUnderstand")] = "true" if obj.must_understand else "false"
+        action_element = xml.Element(xml.QName(uri_wsa, "Action"), attrib=attrs, nsmap={prefix_wsa: uri_wsa})
+        action_element.text = obj.action
+
+        return action_element
+
     else:
         raise TypeError("The type {} is not XML serializeable.".format(type(obj)))
 
@@ -345,7 +354,9 @@ uri_wst = "http://docs.oasis-open.org/ws-sx/ws-trust/200512"
 prefix_wst = "wst"
 
 # WS-Adressing
-uri_wsa = "http://schemas.xmlsoap.org/ws/2004/08/addressing"
+# http://www.w3.org/2005/08/addressing
+# http://schemas.xmlsoap.org/ws/2004/08/addressing
+uri_wsa = "http://www.w3.org/2005/08/addressing"
 prefix_wsa = "wsa"
 
 uri_medcom = "http://www.medcom.dk/dgws/2006/04/dgws-1.0.xsd"

@@ -1,4 +1,6 @@
 from datetime import datetime
+from uuid import uuid4
+from urllib.parse import quote
 
 __all__ = [
            'AdhocQueryRequest', 'ResponseOption', 'AdhocQuery',
@@ -106,7 +108,7 @@ CS_OID_LOINC = "2.16.840.1.113883.6.1"
 LOINC_APPOINTMENT = "39289-4"
 
 
-class AssigningAuthority():
+class AssigningAuthority:
     def __init__(self, oid):
         self._oid = oid
         self._id_type = "ISO"
@@ -379,5 +381,37 @@ class RegistryPackage:
 
 
 class Document:
-    def __init__(self):
-        pass
+
+    def __init__(self, document_id, data, encoding="utf-8", domain="urn:ihe:iti:xds-b:2007"):
+        # Argument 'data' should be bytes, string
+        self.document_id = document_id
+        self._cid_uuid = uuid4()
+        self._cid_domain = domain
+        self._data = data
+
+    @property
+    def cid(self):
+        """
+        Content id as specified in RFC 2392.
+        :return:
+        """
+        return "cid:{}@{}".format(str(self._cid_uuid), quote(str(self._cid_domain)))
+
+    @property
+    def mime_cid(self):
+        """
+        Content-ID as specified in MIME (RFC 2045)
+        :return:
+        """
+        return "<{}@{}>".format(str(self._cid_uuid), str(self._cid_domain))
+
+    @property
+    def data(self):
+        return self._data
+
+    @staticmethod
+    def from_file(document_id, filename, encoding="utf-8", domain="urn:ihe:iti:xds-b:2007"):
+
+        with open(filename, 'r', encoding=encoding) as f:
+            data = f.read()
+            return Document(document_id, data, encoding=encoding, domain=domain)

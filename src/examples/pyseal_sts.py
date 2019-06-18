@@ -131,6 +131,8 @@ def main():
 
     # Convert to XML and pretty print ...
     envelope_element = pyseal.xml.to_xml(envelope)
+    print("\nRequest:")
+    print("--------")
     print(xml.tostring(envelope_element, pretty_print=True).decode("utf-8"))
 
     # Convert SOAP request to string.
@@ -142,6 +144,8 @@ def main():
 
     # Convert response to XML and print it (pretty)
     response_element = xml.fromstring(response.content)
+    print("\nResponse:")
+    print("---------")
     print(xml.tostring(response_element, pretty_print=True).decode("utf-8"))
 
 

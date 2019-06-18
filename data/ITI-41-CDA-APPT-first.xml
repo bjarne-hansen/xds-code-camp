@@ -11,7 +11,7 @@
   <effectiveTime value="20170113100000+0100"/>
   <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
   <languageCode code="da-DK"/>
-  
+
   <!-- information about the patient-->
   <recordTarget contextControlCode="OP" typeCode="RCT">
     <patientRole classCode="PAT">
@@ -36,7 +36,7 @@
       </patient>
     </patientRole>
   </recordTarget>
-  
+
   <!-- the health care organisation and person responsible for the appointment -->
   <author contextControlCode="OP" typeCode="AUT">
   <time value="20170216100000+0100"/>
@@ -65,7 +65,7 @@
       </representedOrganization>
     </assignedAuthor>
   </author>
-  
+
   <!-- the organisation responsible for maintaing the CDA document -->
   <custodian typeCode="CST">
   <assignedCustodian classCode="ASSIGNED">
@@ -82,23 +82,23 @@
       </representedCustodianOrganization>
     </assignedCustodian>
   </custodian>
-  
+
   <!-- the date and time for when the service event will take place -->
   <documentationOf typeCode="DOC">
     <serviceEvent classCode="MPROT" moodCode="EVN">
       <effectiveTime>
         <low value="20170531110000+0100"/>
-        <high value="20170531120000+0100"/>   
+        <high value="20170531120000+0100"/>
       </effectiveTime>
     </serviceEvent>
   </documentationOf>
-  
+
   <!-- CDA Body -->
   <component contextConductionInd="true" typeCode="COMP">
     <structuredBody classCode="DOCBODY" moodCode="EVN">
-      
+
       <component contextConductionInd="true" typeCode="COMP">
-        
+
         <section classCode="DOCSECT" moodCode="EVN">
           <!-- DK APD Plan of treatment section template -->
           <templateId extension="2017-03-10" root="1.2.208.184.14.11.1"/>
@@ -123,25 +123,25 @@
               </tbody>
             </table>
           </text>
-          
+
           <entry>
             <encounter classCode="ENC" moodCode="APT">
               <!-- DK APD Planned Encounter template -->
               <templateId extension="2017-03-10" root="1.2.208.184.14.11.2"/>
-              
+
               <id assigningAuthorityName="MedCom" extension="9a6d1bac-17d3-4195-89a4-1121bc809b4d" root="1.2.208.184"/>
               <code code="185353001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Aftale dato">
               </code>
               <statusCode code="active"/>
-          
+
               <!-- time period for the planned health care service -->
-              <effectiveTime> 
+              <effectiveTime>
                             20170113100000
                 <low value="20170531110000+0100"/>
-                <high value="20170531120000+0100"/>     
+                <high value="20170531120000+0100"/>
               </effectiveTime>
-            
-              <!-- responsible organisation/person for the health care service -->           
+
+              <!-- responsible organisation/person for the health care service -->
               <performer typeCode="PRF">
                 <assignedEntity classCode="ASSIGNED">
                   <id assigningAuthorityName="SOR" extension="320161000016005" root="1.2.208.176.1.1"/>
@@ -166,9 +166,9 @@
                       <streetAddressLine nullFlavor="NI"/>
                     </addr>
                   </representedOrganization>
-                </assignedEntity> 
+                </assignedEntity>
               </performer>
-              
+
               <!-- organisation/person who are requesting the appointment (placer) -->
               <author contextControlCode="OP" typeCode="AUT">
                 <time value="20170216100000+0100"/>
@@ -195,9 +195,9 @@
                     </addr>
                   </representedOrganization>
                 </assignedAuthor>
-              </author>     
-            
-              <!-- location for the planned health care service --> 
+              </author>
+
+              <!-- location for the planned health care service -->
               <participant typeCode="LOC">
                 <participantRole classCode="SDLOC">
                   <!-- DK Service Delivery Location template -->
@@ -207,28 +207,28 @@
                     <streetAddressLine>Vestergade 17</streetAddressLine>
                     <postalCode>5800</postalCode>
                     <city>Nyborg</city>
-                    <country>Danmark</country>             
+                    <country>Danmark</country>
                   </addr>
-                  <telecom use="WP" value="tel:66113333-4"/>                           
+                  <telecom use="WP" value="tel:66113333-4"/>
                   <playingEntity classCode="PLC">
                     <name>OUH Radiologisk Ambulatorium (Nyborg)</name>
                   </playingEntity>
                 </participantRole>
               </participant>
-              
+
               <!-- reason for the planned health care service -->
-              <entryRelationship typeCode="RSON">                        
+              <entryRelationship typeCode="RSON">
                 <observation classCode="OBS" moodCode="RQO">
                   <code code="NI" displayName="Ekkokardiografi (Ultralydsundersøgelse af hjertet)"/>
                 </observation>
               </entryRelationship>
             </encounter>
-          </entry>     
-                    
+          </entry>
+
         </section>
-        
+
       </component>
-    
+
     </structuredBody>
   </component>
 </ClinicalDocument>
