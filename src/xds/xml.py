@@ -10,7 +10,7 @@ from xds.model import *
 
 __all__ = ['to_xml']
 
-# Defifinition of namespace uri and prefixes.
+# Definition of namespace uri and prefixes.
 uri_query = "urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0"
 prefix_query = None
 

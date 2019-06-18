@@ -231,10 +231,10 @@ def main():
     security = Security()
     security.assertion = assertion
 
-    print("Assertion")
-    print(xml.tostring(assertion))
-    print("Security")
-    print(xml.tostring(pyseal.xml.to_xml(security)))
+    # print("Assertion")
+    # print(xml.tostring(assertion))
+    # print("Security")
+    # print(xml.tostring(pyseal.xml.to_xml(security)))
 
     medcom_header = MedcomHeader(non_repudiation_receipt="no")
     action = Action("urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-b", True)
@@ -248,7 +248,7 @@ def main():
     # Wrap in soap envelope
     envelope = Envelope([security, medcom_header, action], prdsr_element)
     envelope_element = pyseal.xml.to_xml(envelope)
-    print(xml.tostring(envelope_element, pretty_print=True).decode("utf-8"))
+    #print(xml.tostring(envelope_element, pretty_print=True).decode("utf-8"))
 
     # Write SOAP as generated.
     with open("data/iti41/request-soap.xml", "w") as f:
@@ -266,7 +266,7 @@ def main():
     print(mime["data"])
     part1 = mime["data"].split("--" + mime["boundary"] + "\n")[1]
     payload1 = part1.split("\n\n", 1)[1]
-    print(payload1)
+    #print(payload1)
 
     # Write SOAP extracted from mime
     with open("data/iti41/request-soap-mime.xml", "w") as f:
@@ -279,9 +279,12 @@ def main():
                    'type="application/xop+xml"; ' \
                    'boundary="{}"; ' \
                    'start="<{}>"; ' \
-                   'start-info="text/xml"'.format(mime["boundary"], mime["root"])
+                   'start-info="application/soap+xml"'.format(mime["boundary"], mime["root"])
+    # text/xml
     headers = {
-        'Content-Type': content_type
+        'Content-Type': content_type,
+        'SOAPAction': '"urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-b"',
+        'MIME-Version': '1.0'
     }
 
     # Write full mime request as generated.
@@ -296,7 +299,9 @@ def main():
         f.flush()
         f.close()
 
-    response = requests.post("http://test2-cnsp.ekstern-test.nspop.dk:8080/drs/proxy",
+    #  "http://test1-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
+    #  "http://test2-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
+    response = requests.post("http://test1-cnsp.ekstern-test.nspop.dk:8080/drs/proxy",
                              headers=headers,
                              data=mime["data"].encode("utf-8"))
     print("\n\nResponse:\nStatus: {}".format(response.status_code))
