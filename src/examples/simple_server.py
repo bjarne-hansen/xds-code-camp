@@ -13,8 +13,6 @@ from lxml import etree as xml
 # See https://github.com/XML-Security/signxml
 from signxml import XMLVerifier
 
-from XmlUtil import URI_SAML
-from copy import deepcopy
 
 import pyseal
 

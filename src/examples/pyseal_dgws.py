@@ -103,7 +103,7 @@ def main():
     print("--------")
     # Convert XML structure to string ...
     print(xml.tostring(envelope_element, pretty_print=True).decode("utf-8"))
-    soap_request = xml.tostring(envelope_element).decode("utf-8")
+    soap_request = xml.tostring(envelope_element, pretty_print=True).decode("utf-8")
     start_time = time.time()
     # Send request to our simple server ...
     response = requests.post("http://localhost:5000/dgws", data=soap_request)

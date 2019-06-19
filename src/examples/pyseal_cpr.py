@@ -61,7 +61,7 @@ def call_cpr_service():
 
     body_element = xml.Element(xml.QName(uri_ns2, "getPersonWithHealthCareInformationIn"), nsmap=ns_cpr)
     identifier_element = xml.SubElement(body_element, xml.QName(uri_none, "PersonCivilRegistrationIdentifier"))
-    identifier_element.text = "0202999573"
+    identifier_element.text = "0411884953" # "0202999573"
     envelope = Envelope([security, medcom_header], body_element)
 
     # Convert to XML ...
