@@ -325,6 +325,7 @@ def main():
     if response.status_code == 200:
 
         # Print response headers ...
+        print("\nHeaders:")
         for k, v in response.headers.items():
             print(k, v)
 
@@ -342,12 +343,12 @@ def main():
             content = mime.content(start)
 
             if content is not None:
-                envelope_element = xml.parse(content)
+                envelope_element = xml.parse(StringIO(content))
                 elements = envelope_element.xpath("//rs:RegistryResponse", namespaces={"rs": "urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0"})
                 if len(elements) > 0:
                     response = elements[0]
                     response_status = response.get("status")
-                    print("Registry response status={}".format(response_status))
+                    print("\n\nRegistry response status: {}".format(response_status))
                     if response_status == "urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success":
                         print("I don't yehaaa a lot, but this is a yehaaa!")
                 else:

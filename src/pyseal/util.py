@@ -58,6 +58,7 @@ class MimeMultipart:
 
         stream = io.StringIO(content)
         for line in stream:
+
             if state == 0: # Looking for boundary
                 if line.rstrip() == "--" + boundary:
                     state = 1
@@ -65,6 +66,7 @@ class MimeMultipart:
                 else:
                     print("'{}'".format(content))
                     raise ValueError("Expected boundary")
+
             elif state == 1: # Parsing headers
                 if line.strip() == '':
                     state = 2
@@ -76,13 +78,19 @@ class MimeMultipart:
                     key = line[0:idx]
                     value = line[idx+1:].strip()
                     headers[key] = value
+
             elif state == 2: # Parse content
-                if line.rstrip() == "--" + boundary:
+                rstripped = line.rstrip()
+                if rstripped == "--" + boundary:
                     mp.__part_content.append(part)
                     part = ""
                     state = 1
-                elif line.rstrip() == "--" + boundary + "--":
-                    print("Found part ...")
+                elif rstripped == "--" + boundary + "--":
+                    mp.__part_content.append(part)
+                    part = ""
+                    state = 3
+                elif rstripped.endswith("--" + boundary + "--"):
+                    part = part + rstripped[0:len(rstripped) - len("--" + boundary + "--")]
                     mp.__part_content.append(part)
                     part = ""
                     state = 3

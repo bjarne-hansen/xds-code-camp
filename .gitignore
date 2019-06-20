@@ -2,3 +2,8 @@ __pycache__
 .DS_Store
 */__pycache__
 **/__pycache__
+data/iti18
+data/iti41
+data/iti43
+**/~*
+venv
