@@ -6,6 +6,7 @@ from urllib.parse import unquote
 from lxml import etree as xml
 
 
+
 from uuid import uuid4
 
 import xds.xml
@@ -237,7 +238,9 @@ def main():
     #  "http://test2-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
 
     # URL to send ITI-41 request to.
-    url = "http://test1-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
+    #url = "http://test1-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
+    url = "http://test2-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
+    #url = "https://test2-cnsp.ekstern-test.nspop.dk:8443/drs/proxy"
 
     # Create all the parts of the ITI-41 request ...
 

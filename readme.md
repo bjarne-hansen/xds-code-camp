@@ -18,6 +18,7 @@ Create virtual environment in the source directory:
 
 ```
 >virtualenv venv
+>source venv/bin/activate
 ```
 
 Install requirements using pip:
