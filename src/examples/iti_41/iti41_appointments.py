@@ -15,7 +15,7 @@ from xds.model import *
 from examples.pyseal_sts import get_sts_assertion
 import pyseal.xml
 from pyseal.security import Security
-from pyseal.soap import Envelope, Action
+from pyseal.soap import Envelope, Action, MessageID, To, ReplyTo
 from pyseal.dgws import MedcomHeader
 from pyseal.hsuid import HsuidHeader, \
     HSUID_ACTING_USER_CIVIL_REGISTRATION_NUMBER, HSUID_CITIZEN_CIVIL_REGISTRATION_NUMBER, HSUID_USER_TYPE, \
@@ -78,6 +78,7 @@ def create_provide_and_register_request():
     # package_id = "8068729215432144472.7462049093652427029.1508924053325"
     # association_id = "6354836999366958523.1074640606702552246.1505117218674"
 
+
     document_id = xds.util.xdsuuid()
     time.sleep(0.127)
     document_unique_id = xds.util.xdsuuid()
@@ -108,7 +109,8 @@ def create_provide_and_register_request():
                          XDS_DOCUMENT_STATUS_APPROVED,                              # status:
                          XDS_TYPE_STABLE,                                           # objectType:
                          document_lid)
-
+    eo.mime_type = "text/xml"
+    eo.name = Name("Aftale for 2512489996", "en-US", "UTF-8")
     rol.extrinsic_objects.append(eo)
 
     # Slots
@@ -225,19 +227,25 @@ def create_provide_and_register_request():
 
 
 def main():
+    url = "http://test1-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
 
     # Create all the parts of the ITI-41 request ...
+
+    # First, get signed assertion from the STS.
     assertion = get_sts_assertion()
+
+    # Create new WS-Security structure including the signed assertion from STS.
     security = Security()
     security.assertion = assertion
 
-    # print("Assertion")
-    # print(xml.tostring(assertion))
-    # print("Security")
-    # print(xml.tostring(pyseal.xml.to_xml(security)))
-
+    # Create the MEDCOM header.
     medcom_header = MedcomHeader(non_repudiation_receipt="no")
+
+    # Create WS-Adressing elements.
     action = Action("urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-b", True)
+    message_id = MessageID()
+    to = To(url)
+    reply_to = ReplyTo("http://www.w3.org/2005/08/addressing/anonymous")
 
     prdsr = create_provide_and_register_request()
 
@@ -246,7 +254,7 @@ def main():
     prdsr_element = xds.xml.to_xml(prdsr)
 
     # Wrap in soap envelope
-    envelope = Envelope([security, medcom_header, action], prdsr_element)
+    envelope = Envelope([security, medcom_header, action, message_id, to, reply_to], prdsr_element)
     envelope_element = pyseal.xml.to_xml(envelope)
     #print(xml.tostring(envelope_element, pretty_print=True).decode("utf-8"))
 
@@ -301,7 +309,7 @@ def main():
 
     #  "http://test1-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
     #  "http://test2-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
-    response = requests.post("http://test1-cnsp.ekstern-test.nspop.dk:8080/drs/proxy",
+    response = requests.post(url,
                              headers=headers,
                              data=mime["data"].encode("utf-8"))
     print("\n\nResponse:\nStatus: {}".format(response.status_code))

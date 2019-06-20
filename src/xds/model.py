@@ -305,6 +305,8 @@ class ExtrinsicObject:
         self._slots = list()
         self._classifications = list()
         self._external_identifiers = list()
+        self.mime_type = None
+        self.name = None
 
     @property
     def slots(self):

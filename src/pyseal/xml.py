@@ -1,7 +1,7 @@
 
 from lxml import etree as xml
 
-from pyseal.soap import Envelope, Action
+from pyseal.soap import Envelope, Action, MessageID, To, ReplyTo
 from pyseal.security import Security
 from pyseal.saml import Assertion, Subject, Conditions, AttributeStatement
 from pyseal.sts import RequestSecurityToken
@@ -324,6 +324,20 @@ def to_xml(obj):
         action_element.text = obj.action
 
         return action_element
+    elif isinstance(obj, MessageID):
+        message_id_element = xml.Element(xml.QName(uri_wsa, "MessageID"), nsmap={prefix_wsa: uri_wsa})
+        message_id_element.text = str(obj.message_id)
+        return message_id_element
+
+    elif isinstance(obj, To):
+        to_element = xml.Element(xml.QName(uri_wsa, "To"), nsmap={prefix_wsa: uri_wsa})
+        to_element.text = obj.to
+        return to_element
+
+    elif isinstance(obj, ReplyTo):
+        reply_to_element = xml.Element(xml.QName(uri_wsa, "ReplyTo"), nsmap={prefix_wsa: uri_wsa})
+        reply_to_element.text = obj.reply_to
+        return reply_to_element
 
     else:
         raise TypeError("The type {} is not XML serializeable.".format(type(obj)))

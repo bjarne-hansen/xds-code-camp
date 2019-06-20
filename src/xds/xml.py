@@ -303,6 +303,8 @@ def to_xml(obj):
             attrs["objectType"] = to_xml(obj.object_type)
         if obj.lid is not None:
             attrs["lid"] = to_xml(obj.lid)
+        if obj.mime_type is not None:
+            attrs["mimeType"] = to_xml(obj.mime_type)
 
         eo_element = xml.Element(xml.QName(uri_rim, "ExtrinsicObject"), attrs)
 
@@ -313,6 +315,13 @@ def to_xml(obj):
             else:
                 raise TypeError("ExtrinsicObject.slots expected element instance of "
                                 "Slot but got {}.".format(type(s)))
+
+        if obj.name is not None:
+            if isinstance(obj.name, Name):
+                name_element = to_xml(obj.name)
+                eo_element.append(name_element)
+            else:
+                raise TypeError("ExtrinsicObject.name expected instance of Name but got {}.".format(type(obj.name)))
 
         for c in obj.classifications:
             if isinstance(c, Classification):
