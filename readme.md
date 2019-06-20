@@ -1,45 +1,44 @@
+# README
 
-## Packages
+This project contains packages and modules for an IHE XDS Code Camp accessing IHE XDS Services ITI-18, ITI- 41, and
+ITI-43 using Python.
 
-### Flask
+Specifically, the project also contains utility code for handling special WS-Security, SAML, and XML-DSIG elements
+required to access IHE XDS services in a Danish context.
 
-The **Flask** package is used for serving simple text/XML/HTML content from a Python server side script.
+## Getting Started
 
-    >pip install flask
+Clone the source from the GitHub repository:
 
-Run Flask using:
+```
+>git clone https://github.com/bjarne-hansen/xds-code-camp 
+```
 
-    >FLASK_APP=simple_server
-    >python -m flask run
+Create virtual environment in the source directory:
 
-http://flask.pocoo.org/docs/1.0/quickstart/
+```
+>virtualenv venv
+```
+
+Install requirements using pip:
+
+```
+>pip install -r requirements.txt
+```
     
-### Requests
-For HTTP request we use the **Requests** package, because Requests is the only Non-GMO HTTP library for Python, safe for human consumption.
+Set python path and flask app:
 
-    >pip install requests
+```
+>export PYTHON_PATH=./src
+>export FLASK_APP=./examples/simple_server.py
+```
     
-https://2.python-requests.org/en/master/
+You should now be ready to consult the slides for the code camp and run the examples included in the `./examples`
+directory of the project.
 
-## DGWS (Den Gode Web Service)
-The profile for web service request used in Danish healthcare it is called DGWS (Den Gode Web Service), which basically means "The Good Web Service".
+The slides can be found in `./doc/XDS Code Camp Slides.pdf`.
 
-* SOAP + SAML + XMLDSig
-* Always use utf-8 encoding
-* MessageID, FlowID
-* Must be secured via SSL/VPN
-
-
-https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol2a.pdf
-https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol2b.pdf
-https://www.ihe.net/Technical_Framework/upload/IHE_ITI_TF_Rev8-0_Vol3_FT_2011-08-19.pdf
-https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol2x.pdf
-
-https://www.hl7.org/documentcenter/public_temp_EDAF2E9D-1C23-BA17-0C4DB37D612CEF51/wg/inm/datatypes-its-xml20050714.htm#dtimpl-ANY
-https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_On_Demand_Documents_Rev1.3_TI_2013-10-25.pdf
-
-https://svn.nspop.dk/public/components/dds/latest/doc/
-
-
+Several standards, profiles, and specifications referred to in the slides are also provided for reference in the
+`./doc` directory. Newer versions should be downloaded if required. Links are found at the end of the slides.
 
 
