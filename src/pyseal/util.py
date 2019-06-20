@@ -37,7 +37,6 @@ class MimeMultipart:
         if isinstance(index, int):
             return self.__part_content[index]
         else:
-
             content_id = str(index)
             part_idx = 0
             for ph in self.__part_header:
@@ -83,6 +82,7 @@ class MimeMultipart:
                     part = ""
                     state = 1
                 elif line.rstrip() == "--" + boundary + "--":
+                    print("Found part ...")
                     mp.__part_content.append(part)
                     part = ""
                     state = 3

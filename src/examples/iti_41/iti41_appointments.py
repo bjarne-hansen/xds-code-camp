@@ -22,6 +22,8 @@ from pyseal.hsuid import HsuidHeader, \
     HSUID_SYSTEM_OWNER_NAME, HSUID_SYSTEM_NAME, HSUID_SYSTEM_VERSION, HSUID_ORG_RESPONSIBLE_NAME, \
     HSUID_CITIZEN_USER_RELATION
 
+from pyseal.util import MimeMultipart, split_header, first
+
 
 def create_signed_assersion():
     # Get signed assertion from STS.
@@ -51,6 +53,7 @@ def create_hsuid():
     hsuid_header[HSUID_CITIZEN_USER_RELATION] = "nsi:Citizen"
     return hsuid_header
 
+
 def create_medcom_header():
     # Create the MEDCOM header
     medcom_header = MedcomHeader(non_repudiation_receipt="no")
@@ -71,22 +74,15 @@ def create_medcom_header():
 
 
 def create_provide_and_register_request():
+
+    #
     # Generated unique ids.
-    # document_id = "6506406950972547768.3005222075357642518.1508924053324"
-    # document_unique_id = "5810095692724235632.653971985411228666.1508924053323"
-    # document_lid = "8882987292134516828.9018552530933664388.1505117218657"
-    # package_id = "8068729215432144472.7462049093652427029.1508924053325"
-    # association_id = "6354836999366958523.1074640606702552246.1505117218674"
-
-
+    # The xdsuuid() function returns a special variant of a uuid v4 that includes a millisecons timestamp.
+    #
     document_id = xds.util.xdsuuid()
-    time.sleep(0.127)
     document_unique_id = xds.util.xdsuuid()
-    time.sleep(0.127)
     document_lid = xds.util.xdsuuid()
-    time.sleep(0.127)
     package_id = xds.util.xdsuuid()
-    time.sleep(0.127)
     association_id = xds.util.xdsuuid()
 
     #
@@ -95,22 +91,26 @@ def create_provide_and_register_request():
     provide_and_register_document_set_request = ProvideAndRegisterDocumentSetRequest()
 
     #
-    #
+    # Create the SubmitObjectRequest and assign it to the provide and register document set.
     #
     submit_object_request = SubmitObjectsRequest()
     provide_and_register_document_set_request.submit_object_request = submit_object_request
 
-    # RegistryObjectList
+    #
+    # RegistryObjectList (we can register one or more documents in one request).
+    #
     rol = RegistryObjectList()
     submit_object_request.registry_object_list = rol
 
-    # ExtrinsicObject
+    #
+    # ExtrinsicObject (meta-data about document being submitted)
+    #
     eo = ExtrinsicObject(document_id,                                               # id: Document being submitted
                          XDS_DOCUMENT_STATUS_APPROVED,                              # status:
                          XDS_TYPE_STABLE,                                           # objectType:
                          document_lid)
-    eo.mime_type = "text/xml"
-    eo.name = Name("Aftale for 2512489996", "en-US", "UTF-8")
+    eo.mime_type = "text/xml"                                                       # mime type of content.
+    eo.name = Name("Aftale for 2512489996", "en-US", "UTF-8")                       # Name of document.
     rol.extrinsic_objects.append(eo)
 
     # Slots
@@ -121,7 +121,6 @@ def create_provide_and_register_request():
 
     # Classification: authorInstitution
     slot = Slot("authorInstitution", OrganizationIdentifier("OUH Radiologisk Afdeling (Svendborg)", "242621000016001"))
-
     eo.classifications.append(Classification(uuid4(), document_id, XDS_DE_AUTHOR, "", slot=slot))
 
     # Classification: codingScheme (classCode)
@@ -132,9 +131,10 @@ def create_provide_and_register_request():
 
     # Classification: codingScheme (formatCode)
     #   See DK-IHE_Metadata-Common_Code_systems-Value_sets.xls
+    #   In this case we are submitting an appointment.
     slot = Slot("codingScheme", CS_OID_DK_IHE_FORMAT_CODE)  # DK IHE Format Code
     name = Name("DK PHMR schema", "en-US", "UTF-8")
-    eo.classifications.append(Classification(uuid4(), document_id, XDS_DE_FORMAT_CODE, "urn:ad:dk:medcom:phmr:full",
+    eo.classifications.append(Classification(uuid4(), document_id, XDS_DE_FORMAT_CODE, "urn:ad:dk:medcom:appointmentsummary:full",
                                              slot=slot, name=name))
 
     # Classification: codingScheme (healthcareFacilityCode)
@@ -167,29 +167,32 @@ def create_provide_and_register_request():
     ei = ExternalIdentifier(uuid4(), document_id, XDS_DE_UNIQUE_ID, document_unique_id, name=name)
     eo.external_identifiers.append(ei)
 
-
+    #
     # RegistryPackage:
-
-
+    #
     rp = RegistryPackage(package_id,
                          XDS_DOCUMENT_STATUS_APPROVED,
                          package_id,
                          Name(package_id, "en-US", "UTF-8"))
-
     rol.registry_packages.append(rp)
 
     # Slot: submissionTome
     rp.slots.append(Slot("submissionTime", "20170531120000"))
 
+    #
+    # Classification: codingScheme (typeCode)
+    #   See DK-IHE_Metadata-Common_Code_systems-Value_sets.xls
+    #   Here used as a classification of the SubmissionSet rather than the document as above.
+    #   The content type code specifies the action that resulted in one or more documents being submitted within this
+    #   SubmissionSet, i.e. it must cover all the documents as such.
+    #
+    slot = Slot("codingScheme", CS_OID_LOINC)  # DK IHE Type Code (LOINC)
+    name = Name("Dato og tidspunkt for møde mellem patient og sundhedsperson", "en-US", "UTF-8")
+    rp.classifications.append(Classification(uuid4(), package_id, XDS_DE_CONTENT_TYPE_CODE, "39289-4", slot=slot, name=name))
+
     # Classification: authorInstitution
     slot = Slot("authorInstitution", OrganizationIdentifier("OUH Radiologisk Afdeling (Svendborg)", "242621000016001"))
     rp.classifications.append(Classification(uuid4(), package_id, XDS_SS_AUTHOR, "", slot=slot))
-
-    # Classification: codingScheme (XDS DocumentEntry contentTypeCode) # IHE_ITI_TF_Rev8-0_Vol3_FT Table 4.1-6
-    slot = Slot("codingScheme",  XDS_DE_CONTENT_TYPE_CODE)
-    name = Name("NscContentType", "en-US", "UTF-8")
-    rp.classifications.append(Classification(uuid4(), package_id, XDS_DE_CONTENT_TYPE_CODE, "NscContentType",
-                                             slot=slot, name=name))
 
     # ExternalIdentifier: patientId
     name = Name("XDSSubmissionSet.patientId")
@@ -206,27 +209,34 @@ def create_provide_and_register_request():
     ei = ExternalIdentifier(uuid4(), package_id, XDS_SS_SOURCE_ID, package_id, name=name)
     rp.external_identifiers.append(ei)
 
+    # Classification that identifies this as a submission set (IHE XDS)
     rol.classifications.append(Classification(uuid4(), package_id, classification_node=XDS_CN_SUBMISSION_SET))
 
+    # Create Association than includes the document (ExtrinsicObject) in the SubmissionSet (RegistryPackage),
     association = Association(association_id,
                               XDS_AT_HAS_MEMBER,
-                              package_id,   # SubmissionSet (registry package)
-                              document_id,  # Document being submitted
+                              package_id,                                           # SubmissionSet (registry package)
+                              document_id,                                          # Document being submitted
                               XDS_DOCUMENT_STATUS_APPROVED)
     rol.associations.append(association)
 
     association.slots.append(Slot("SubmissionSetStatus", "Original"))
-    association.slots.append(Slot("OriginalStatus", XDS_DOCUMENT_STATUS_APPROVED))
-    association.slots.append(Slot("NewStatus", XDS_DOCUMENT_STATUS_APPROVED))
+    # association.slots.append(Slot("OriginalStatus", XDS_DOCUMENT_STATUS_APPROVED))
+    # association.slots.append(Slot("NewStatus", XDS_DOCUMENT_STATUS_APPROVED))
 
+    # Load Document from file ...
     document = Document.from_file(document_id, 'data/ITI-41-CDA-APPT.xml')
-    #document = Document.from_file(document_id, 'data/ITI-41-CDA-APPT-test.xml')
     provide_and_register_document_set_request.documents.append(document)
 
+    # Return complete provide and register document set object hierarchy.
     return provide_and_register_document_set_request
 
 
 def main():
+    #  "http://test1-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
+    #  "http://test2-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
+
+    # URL to send ITI-41 request to.
     url = "http://test1-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
 
     # Create all the parts of the ITI-41 request ...
@@ -256,39 +266,29 @@ def main():
     # Wrap in soap envelope
     envelope = Envelope([security, medcom_header, action, message_id, to, reply_to], prdsr_element)
     envelope_element = pyseal.xml.to_xml(envelope)
-    #print(xml.tostring(envelope_element, pretty_print=True).decode("utf-8"))
 
-    # Write SOAP as generated.
+    # Optionally pretty print the SOAP request
+    # print(xml.tostring(envelope_element, pretty_print=True).decode("utf-8"))
+
+    # Write SOAP as generated to a file.
     with open("data/iti41/request-soap.xml", "w") as f:
         f.write(xml.tostring(envelope_element).decode())
         f.flush()
         f.close()
 
-    # Create mime from SOAP envelope
+    # Create mime from SOAP envelope.
     request = xml.tostring(envelope_element).decode()
     mime = xds.util.to_mime(request, prdsr.documents)
 
-    print("Mime root={}".format(mime["root"]))
-    print("Mime boundary={}".format(mime["boundary"]))
-    print("Mime data:")
-    print(mime["data"])
-    part1 = mime["data"].split("--" + mime["boundary"] + "\n")[1]
-    payload1 = part1.split("\n\n", 1)[1]
-    #print(payload1)
-
-    # Write SOAP extracted from mime
-    with open("data/iti41/request-soap-mime.xml", "w") as f:
-       f.write(payload1)
-       f.flush()
-       f.close()
-
+    # Create content type HTTP header for the MIME request.
     content_type = 'multipart/related; ' \
                    'charset="utf-8"; ' \
                    'type="application/xop+xml"; ' \
                    'boundary="{}"; ' \
                    'start="<{}>"; ' \
                    'start-info="application/soap+xml"'.format(mime["boundary"], mime["root"])
-    # text/xml
+
+    # Set up HTTP headers for request.
     headers = {
         'Content-Type': content_type,
         'SOAPAction': '"urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-b"',
@@ -307,13 +307,59 @@ def main():
         f.flush()
         f.close()
 
-    #  "http://test1-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
-    #  "http://test2-cnsp.ekstern-test.nspop.dk:8080/drs/proxy"
+    # Execute request ...
+    print("Sending ITI-41 request to {} ...".format(url))
     response = requests.post(url,
                              headers=headers,
                              data=mime["data"].encode("utf-8"))
+
+    # Write response to file.
+    with open("data/iti41/response-mime.txt", "w", encoding="utf-8") as f:
+        f.write(response.text)
+        f.flush()
+        f.close()
+
+    # Report success/failure.
     print("\n\nResponse:\nStatus: {}".format(response.status_code))
-    print(response.text)
+
+    if response.status_code == 200:
+
+        # Print response headers ...
+        for k, v in response.headers.items():
+            print(k, v)
+
+        # Get and split the Content-Type header'
+        content_type = split_header(response.headers.get("content-type"))
+        if content_type[None] == "multipart/related":
+
+            # Get boundary (MIME separator) and start (Content-ID) from the Content-Type header.
+            boundary = content_type["boundary"]
+            start = content_type["start"]
+
+            # Parse the MIME response and get the part with the Content-ID specified in the 'start' part of the
+            # Content-Type.
+            mime = MimeMultipart.parse(boundary, response.text)
+            content = mime.content(start)
+
+            if content is not None:
+                envelope_element = xml.parse(content)
+                elements = envelope_element.xpath("//rs:RegistryResponse", namespaces={"rs": "urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0"})
+                if len(elements) > 0:
+                    response = elements[0]
+                    response_status = response.get("status")
+                    print("Registry response status={}".format(response_status))
+                    if response_status == "urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success":
+                        print("I don't yehaaa a lot, but this is a yehaaa!")
+                else:
+                    print("Didn't really find any RegistryResponse. This may be an error.")
+            else:
+                print("Really? There seems to be no MIME content with Content-ID {}".format(start))
+        else:
+            print("The response does not seem to be multipart/related. Is this an error?")
+    else:
+        print("Sorry. Looks like something went wrong. See data/iti41/response-mime.txt for details.")
+
+
 
 
 if __name__ == "__main__":

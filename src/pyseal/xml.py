@@ -319,7 +319,7 @@ def to_xml(obj):
     elif isinstance(obj, Action):
 
         attrs = dict()
-        attrs[xml.QName(uri_soap, "mustUnderstand")] = "true" if obj.must_understand else "false"
+        attrs[xml.QName(uri_soap, "mustUnderstand")] = "1" if obj.must_understand else "0"
         action_element = xml.Element(xml.QName(uri_wsa, "Action"), attrib=attrs, nsmap={prefix_wsa: uri_wsa})
         action_element.text = obj.action
 
